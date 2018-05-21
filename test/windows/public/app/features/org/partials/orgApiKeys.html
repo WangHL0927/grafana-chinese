@@ -2,7 +2,7 @@
 
 <div class="page-container page-body">
 
-	<h3 class="page-heading">Add new</h3>
+	<h3 class="page-heading">新建</h3>
 
 	<form name="addTokenForm" class="gf-form-group">
 		<div class="gf-form-inline">
@@ -11,23 +11,23 @@
 				<input type="text" class="gf-form-input" ng-model='token.name' placeholder="Name"></input>
 			</div>
 			<div class="gf-form">
-				<span class="gf-form-label">Role</span>
+				<span class="gf-form-label">角色</span>
         <span class="gf-form-select-wrapper">
             <select class="gf-form-input gf-size-auto" ng-model="token.role" ng-options="r for r in roleTypes"></select>
         </span>
 			</div>
 			<div class="gf-form">
-				<button class="btn gf-form-btn btn-success" ng-click="addToken()">Add</button>
+				<button class="btn gf-form-btn btn-success" ng-click="addToken()">添加</button>
 			</div>
 		</div>
 	</form>
 
-	<h3 class="page-heading">Existing Keys</h3>
+	<h3 class="page-heading">Key已存在</h3>
 	<table class="filter-table">
 		<thead>
 			<tr>
-				<th>Name</th>
-				<th>Role</th>
+				<th>名称</th>
+				<th>角色</th>
 				<th style="width: 34px;"></th>
 			</tr>
 		</thead>

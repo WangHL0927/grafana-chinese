@@ -9,16 +9,16 @@
 
       <a href="alerting/notification/new" class="btn btn-success">
         <i class="fa fa-plus"></i>
-        New Channel
+        新频道
       </a>
     </div>
 
     <table class="filter-table filter-table--hover">
       <thead>
         <th style="min-width: 200px">
-          <strong>Name</strong>
+          <strong>名称</strong>
         </th>
-        <th style="min-width: 100px">Type</th>
+        <th style="min-width: 100px">类型</th>
         <th style="width: 1%"></th>
       </thead>
       <tbody>
@@ -35,7 +35,7 @@
           </td>
           <td class="text-right">
             <span class="btn btn-secondary btn-small" ng-show="notification.isDefault == true">
-              default
+              默认
             </span>
             <a ng-click="ctrl.deleteNotification(notification.id)" class="btn btn-danger btn-small">
               <i class="fa fa-remove"></i>

@@ -2,20 +2,21 @@
 
 <div class="page-container page-body" ng-form="playlistEditForm">
 	<h2 class="page-sub-heading">
-		New Organization
+    新组织
 	</h2>
 
-	<p class="playlist-description">Each organization contains their own dashboards, data sources and configuration, and cannot be shared between orgs. While users may belong to more than one, multiple organization are most frequently used in multi-tenant deployments. </p>
+	<p class="playlist-description">每个组织都拥有自己的仪表板，数据源和配置，并且不能在组织之间共享。
+    尽管用户可能属于多个组织，但在多用户部署中最常使用多个组织。</p>
 
 	<form>
 		<div class="gf-form-group">
 			<div class="gf-form">
-				<span class="gf-form-label width-10">Org. name</span>
+				<span class="gf-form-label width-10">组织名称</span>
 				<input type="text" ng-model="newOrg.name" required class="gf-form-input max-width-21" placeholder="organization name">
 			</div>
 			<br>
 			<div class="gf-form-buttons-row">
-				<button type="submit" class="btn btn-success" ng-click="createOrg()">Create</button>
+				<button type="submit" class="btn btn-success" ng-click="createOrg()">创建</button>
 			</div>
 		</div>
 	</form>

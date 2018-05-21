@@ -5,7 +5,7 @@
 <a class="sidemenu__logo_small_breakpoint" ng-click="ctrl.toggleSideMenuSmallBreakpoint()">
   <i class="fa fa-bars"></i>
   <span class="sidemenu__close">
-    <i class="fa fa-times"></i>&nbsp;Close</span>
+    <i class="fa fa-times"></i>&nbsp;关闭</span>
 </a>
 
 <div class="sidemenu__top">
@@ -40,7 +40,7 @@
     <a href="{{ctrl.loginUrl}}" target="_self">
       <ul class="dropdown-menu dropdown-menu--sidemenu" role="menu">
         <li class="side-menu-header">
-          <span class="sidemenu-item-text">Sign In</span>
+          <span class="sidemenu-item-text">登录</span>
         </li>
       </ul>
     </a>
@@ -64,7 +64,7 @@
             <div class="sidemenu-org-switcher__org-current">Current Org:</div>
           </div>
           <div class="sidemenu-org-switcher__switch">
-            <i class="fa fa-fw fa-random"></i>Switch</div>
+            <i class="fa fa-fw fa-random"></i>切换</div>
         </a>
       </li>
       <li ng-repeat="child in ::item.children" ng-class="{divider: child.divider}" ng-hide="::child.hideFromMenu">

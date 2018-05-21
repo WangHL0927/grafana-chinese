@@ -2,24 +2,25 @@
 
 <div class="page-container page-body" ng-form="playlistEditForm">
 
-  <h3 class="page-sub-heading" ng-hide="ctrl.isNew">Edit Playlist</h3>
-  <h3 class="page-sub-heading" ng-show="ctrl.isNew">New Playlist</h3>
+  <h3 class="page-sub-heading" ng-hide="ctrl.isNew">编辑播放列表</h3>
+  <h3 class="page-sub-heading" ng-show="ctrl.isNew">新建播放列表</h3>
 
-	<p class="playlist-description">A playlist rotates through a pre-selected list of Dashboards. A Playlist can be a great way to build situational awareness, or just show off your metrics to your team or visitors.</p>
+	<p class="playlist-description">播放列表循环切换预选的仪表板列表。 播放列表是建立态势感知的好方法，
+         或者只是向您的团队或访客展示您的指标。</p>
 
 	<div class="gf-form-group">
 		<div class="gf-form">
-			<span class="gf-form-label width-7">Name</span>
+			<span class="gf-form-label width-7">名称</span>
 			<input type="text" required ng-model="ctrl.playlist.name" class="gf-form-input max-width-21">
 		</div>
 		<div class="gf-form">
-			<span class="gf-form-label width-7">Interval</span>
+			<span class="gf-form-label width-7">间隔</span>
 			<input type="text" required ng-model="ctrl.playlist.interval" placeholder="5m" class="gf-form-input max-width-21">
 		</div>
 	</div>
 
 	<div class="gf-form-group">
-		<h3 class="page-headering">Dashboards</h3>
+		<h3 class="page-headering">仪表板</h3>
 	</div>
 
 	<div class="row">
@@ -44,7 +45,7 @@
 						<td class="add-dashboard">
 							<button class="btn btn-inverse btn-mini pull-right" ng-click="ctrl.addPlaylistItem(playlistItem)">
 								<i class="fa fa-plus"></i>
-								Add to playlist
+								添加到播放列表
 							</button>
 						</td>
 					</tr>
@@ -62,7 +63,7 @@
 						<td class="add-dashboard">
 							<button class="btn btn-inverse btn-mini pull-right" ng-click="ctrl.addTagPlaylistItem(tag)">
 								<i class="fa fa-plus"></i>
-								Add to playlist
+                添加到播放列表
 							</button>
 						</td>
 					</tr>
@@ -71,7 +72,7 @@
 		</div>
 
 		<div class="col-lg-6">
-			<h5 class="page headering playlist-column-header">Selected</h5>
+			<h5 class="page headering playlist-column-header">已选择</h5>
 			<table class="filter-table playlist-available-list">
 				<tr ng-repeat="playlistItem in ctrl.playlistItems">
 					<td ng-if="playlistItem.type === 'dashboard_by_id'">
@@ -105,10 +106,10 @@
 	<div class="gf-form-button-row">
 		<a class="btn btn-success " ng-show="ctrl.isNew"
 			ng-disabled="ctrl.playlistEditForm.$invalid || ctrl.isPlaylistEmpty()"
-			ng-click="ctrl.savePlaylist(ctrl.playlist, ctrl.playlistItems)">Create new playlist</a>
+			ng-click="ctrl.savePlaylist(ctrl.playlist, ctrl.playlistItems)">创建新播放列表</a>
 		<a class="btn btn-success" ng-show="!ctrl.isNew()"
 			ng-disabled="ctrl.playlistEditForm.$invalid || ctrl.isPlaylistEmpty()"
-			ng-click="ctrl.savePlaylist(ctrl.playlist, ctrl.playlistItems)">Save</a>
-		<a class="btn-text" ng-click="ctrl.backToList()">Cancel</a>
+			ng-click="ctrl.savePlaylist(ctrl.playlist, ctrl.playlistItems)">保存</a>
+		<a class="btn-text" ng-click="ctrl.backToList()">取消</a>
 	</div>
 </div>

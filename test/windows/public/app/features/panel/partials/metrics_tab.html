@@ -4,7 +4,7 @@
 			<label class="gf-form-label gf-query-ds-label">
 				<i class="icon-gf icon-gf-datasources"></i>
 			</label>
-      <label class="gf-form-label">Data Source</label>
+      <label class="gf-form-label">数据源</label>
 
       <gf-form-dropdown model="ctrl.panelDsValue" css-class="gf-size-auto"
                         lookup-text="true"
@@ -18,17 +18,17 @@
 		</div>
 		<div class="gf-form" ng-if="ctrl.queryOptions">
 			<a class="gf-form-label" ng-click="ctrl.toggleOptions()">
-				<i class="fa fa-fw fa-caret-right" ng-hide="ctrl.optionsOpen"></i><i class="fa fa-fw fa-caret-down" ng-show="ctrl.optionsOpen"></i>Options
+				<i class="fa fa-fw fa-caret-right" ng-hide="ctrl.optionsOpen"></i><i class="fa fa-fw fa-caret-down" ng-show="ctrl.optionsOpen"></i>选项
 			</a>
 		</div>
 		<div class="gf-form" ng-if="ctrl.hasQueryHelp">
 			<button class="gf-form-label" ng-click="ctrl.toggleHelp()">
-				<i class="fa fa-fw fa-caret-right" ng-hide="ctrl.helpOpen"></i><i class="fa fa-fw fa-caret-down" ng-show="ctrl.helpOpen"></i>Help
+				<i class="fa fa-fw fa-caret-right" ng-hide="ctrl.helpOpen"></i><i class="fa fa-fw fa-caret-down" ng-show="ctrl.helpOpen"></i>帮助
 			</button>
 		</div>
 		<div class="gf-form">
 			<button class="gf-form-label" ng-click="ctrl.toggleQueryTroubleshooter()" bs-tooltip="'Display query request & response'">
-				<i class="fa fa-fw fa-caret-right" ng-hide="ctrl.queryTroubleshooterOpen"></i><i class="fa fa-fw fa-caret-down" ng-show="ctrl.queryTroubleshooterOpen"></i>Query Inspector
+				<i class="fa fa-fw fa-caret-right" ng-hide="ctrl.queryTroubleshooterOpen"></i><i class="fa fa-fw fa-caret-down" ng-show="ctrl.queryTroubleshooterOpen"></i>查询检查器
 			</button>
 		</div>
 	</div>
@@ -36,28 +36,28 @@
 	<div>
 		<div ng-if="ctrl.optionsOpen">
 			<div class="gf-form gf-form--flex-end" ng-if="ctrl.queryOptions.minInterval">
-				<label class="gf-form-label">Min time interval</label>
+				<label class="gf-form-label">最小时间间隔</label>
 				<input type="text" class="gf-form-input width-6" placeholder="{{ctrl.panelCtrl.interval}}" ng-model="ctrl.panel.interval" spellcheck="false" ng-model-onblur ng-change="ctrl.panelCtrl.refresh()" />
 				<info-popover mode="right-absolute">
-					A lower limit for the auto group by time interval. Recommended to be set to write frequency,
-					for example <code>1m</code> if your data is written every minute. Access auto interval via variable <code>$__interval</code> for time range
-					string and <code>$__interval_ms</code> for numeric variable that can be used in math expressions.
+          按时间间隔自动分组的下限。 建议设置为写入频率，
+					例如 <code>1m</code> 如果您的数据每分钟写入一次。 通过变量<code>$__interval</code> 访问自动间隔的时间范围
+          字符串和<code>$__interval_ms</code> 可用于数学表达式中的数字变量。
 				</info-popover>
 			</div>
 			<div class="gf-form gf-form--flex-end" ng-if="ctrl.queryOptions.cacheTimeout">
-				<label class="gf-form-label width-9">Cache timeout</label>
+				<label class="gf-form-label width-9">缓存超时</label>
 				<input  type="text" class="gf-form-input width-6" placeholder="60" ng-model="ctrl.panel.cacheTimeout" ng-model-onblur ng-change="ctrl.panelCtrl.refresh()" spellcheck="false" />
 				<info-popover mode="right-absolute">
-					If your time series store has a query cache this option can override the default
-					cache timeout. Specify a numeric value in seconds.
+          如果您的时间系列商店有查询缓存，则此选项可以覆盖
+          缓存超时默认值。 以秒为单位指定一个数值。
 				</info-popover>
 			</div>
 			<div class="gf-form gf-form--flex-end" ng-if="ctrl.queryOptions.maxDataPoints">
-				<label class="gf-form-label width-9">Max data points</label>
+				<label class="gf-form-label width-9">最大数据点</label>
 				<input type="text" class="gf-form-input width-6" placeholder="auto" ng-model-onblur ng-change="ctrl.panelCtrl.refresh()" ng-model="ctrl.panel.maxDataPoints" spellcheck="false"  />
 				<info-popover mode="right-absolute">
-					The maximum data points the query should return. For graphs this
-					is automatically set to one data point per pixel.
+          查询应返回的最大数据点数目。 对于graph图标
+          自动设置为每个像素一个数据点。
 				</info-popover>
 			</div>
 		</div>

@@ -10,12 +10,12 @@
     <div class="page-action-bar__spacer"></div>
 
     <button class="btn btn-inverse" ng-show="ctrl.pendingInvites.length" ng-click="ctrl.showInvites = true">
-      Pending Invites ({{ctrl.pendingInvites.length}})
+      待确认邀请 ({{ctrl.pendingInvites.length}})
     </button>
 
     <a class="btn btn-success" href="org/users/invite" ng-show="ctrl.canInvite">
       <i class="fa fa-plus"></i>
-      <span>Invite</span>
+      <span>邀请</span>
     </a>
 
     <a class="btn btn-success" ng-href="{{ctrl.externalUserMngLinkUrl}}" target="_blank" ng-if="ctrl.externalUserMngLinkUrl">
@@ -33,13 +33,13 @@
       <thead>
         <tr>
           <th></th>
-          <th>Login</th>
-          <th>Email</th>
+          <th>登录</th>
+          <th>邮箱</th>
           <th>
-            Seen
-            <tip>Time since user was seen using Grafana</tip>
+            查看
+            <tip>上次使用时间</tip>
           </th>
-          <th>Role</th>
+          <th>角色</th>
           <th style="width: 34px;"></th>
         </tr>
       </thead>
@@ -69,8 +69,8 @@
     <table class="filter-table form-inline">
       <thead>
         <tr>
-          <th>Email</th>
-          <th>Name</th>
+          <th>邮箱</th>
+          <th>姓名</th>
           <th></th>
           <th style="width: 34px;"></th>
         </tr>
@@ -80,7 +80,7 @@
         <td>{{invite.name}}</td>
         <td class="text-right">
           <button class="btn btn-inverse btn-mini" clipboard-button="ctrl.getInviteUrl(invite)" ng-click="ctrl.copyInviteToClipboard($event)">
-            <i class="fa fa-clipboard"></i> Copy Invite
+            <i class="fa fa-clipboard"></i> 复制邀请
           </button>
           &nbsp;
         </td>

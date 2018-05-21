@@ -61,7 +61,7 @@ export default observer(({ item, removeItem, permissionChanged, itemIndex, folde
               </a>{' '}
             </em>
           )}
-        {inheritedFromRoot && <em className="muted no-wrap">Default Permission</em>}
+        {inheritedFromRoot && <em className="muted no-wrap">默认权限</em>}
       </td>
       <td className="query-keyword">Can</td>
       <td>

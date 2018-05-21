@@ -1,27 +1,27 @@
 <page-header model="navModel"></page-header>
 
 <div class="page-container page-body">
-	<h3 class="page-sub-heading">Hello {{greeting}}.</h3>
+	<h3 class="page-sub-heading">你好 {{greeting}}.</h3>
 
 	<div class="modal-tagline p-b-2">
-		<em>{{invitedBy}}</em> has invited you to join Grafana and the organization <span class="highlight-word">{{contextSrv.user.orgName}}</span></br>Please complete the following to accept your invitation and continue:
+		<em>{{invitedBy}}</em> 已邀请您加入Grafana组织 <span class="highlight-word">{{contextSrv.user.orgName}}</span></br>请填写以下内容以接受邀请：
 	</div>
 
 	<form name="inviteForm" class="login-form gf-form-group">
 		<div class="gf-form">
-			<span class="gf-form-label width-7">Email</span>
+			<span class="gf-form-label width-7">邮箱</span>
 			<input type="email" name="email" class="gf-form-input max-width-21" required ng-model='formModel.email' placeholder="Email">
 		</div>
 		<div class="gf-form">
-			<span class="gf-form-label width-7">Name</span>
+			<span class="gf-form-label width-7">姓名</span>
 			<input type="text" name="name" class="gf-form-input max-width-21" ng-model='formModel.name' placeholder="Name (optional)">
 		</div>
 		<div class="gf-form">
-			<span class="gf-form-label width-7">Username</span>
+			<span class="gf-form-label width-7">用户名</span>
 			<input type="text" name="username" class="gf-form-input max-width-21" required ng-model='formModel.username' placeholder="Username">
 		</div>
 		<div class="gf-form">
-			<span class="gf-form-label width-7">Password</span>
+			<span class="gf-form-label width-7">密码</span>
 			<input type="password" name="password" class="gf-form-input max-width-21" required ng-model="formModel.password" id="inputPassword" placeholder="password">
 		</div>
 
@@ -31,7 +31,7 @@
 
 		<div class="gf-form-button-row">
 			<button type="submit" class="btn btn-success" ng-click="submit();" ng-disable="!inviteForm.$valid">
-				Sign Up
+				注册
 			</button>
 		</div>
 	</form>
