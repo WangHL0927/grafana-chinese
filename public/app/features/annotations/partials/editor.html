@@ -1,0 +1,113 @@
+
+<div ng-controller="AnnotationsEditorCtrl">
+	<h3 class="dashboard-settings__header">
+		<a ng-click="ctrl.backToList()">注释</a>
+		<span ng-show="ctrl.mode === 'new'">&gt; 新建</span>
+		<span ng-show="ctrl.mode === 'edit'">&gt; 编辑</span>
+	</h3>
+
+	<div ng-if="ctrl.mode === 'list'">
+		<div class="page-action-bar" ng-if="ctrl.annotations.length > 1">
+			<div class="page-action-bar__spacer"></div>
+			<a type="button" class="btn btn-success" ng-click="ctrl.setupNew();"><i class="fa fa-plus" ></i> 新建</a>
+		</div>
+
+		<table class="filter-table filter-table--hover">
+			<thead>
+				<tr>
+					<th>查询名称</th>
+					<th>数据源</th>
+					<th colspan="3"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="annotation in ctrl.annotations">
+					<td style="width:90%" ng-hide="annotation.builtIn" class="pointer" ng-click="ctrl.edit(annotation)">
+						<i class="fa fa-comment" style="color:{{annotation.iconColor}}"></i> &nbsp;
+						{{annotation.name}}
+					</td>
+					<td style="width:90%" ng-show="annotation.builtIn" class="pointer" ng-click="ctrl.edit(annotation)">
+						<i class="gicon gicon-annotation"></i> &nbsp;
+						<em class="muted">{{annotation.name}} (内置)</em>
+					</td>
+					<td class="pointer" ng-click="ctrl.edit(annotation)">
+						{{annotation.datasource || 'Default'}}
+					</td>
+					<td style="width: 1%"><i ng-click="_.move(ctrl.annotations,$index,$index-1)" ng-hide="$first" class="pointer fa fa-arrow-up"></i></td>
+					<td style="width: 1%"><i ng-click="_.move(ctrl.annotations,$index,$index+1)" ng-hide="$last" class="pointer fa fa-arrow-down"></i></td>
+					<td style="width: 1%">
+						<a ng-click="ctrl.removeAnnotation(annotation)" class="btn btn-danger btn-mini" ng-hide="annotation.builtIn">
+							<i class="fa fa-remove"></i>
+						</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<!-- empty list cta, there is always one built in query -->
+		<div ng-if="ctrl.annotations.length === 1" class="p-t-2">
+			<div class="empty-list-cta">
+				<div class="empty-list-cta__title">目前没有添加自定义注释查询</div>
+				<a ng-click="ctrl.setupNew()" class="empty-list-cta__button btn btn-xlarge btn-success">
+					<i class="gicon gicon-add-annotation"></i>
+          添加注释查询
+				</a>
+				<div class="grafana-info-box">
+					<h5>什么是注释？</h5>
+					<p>
+            注释提供了一种将事件数据集成到图形中的方法。 它们在所有图形面板上可视化为垂直线条和图标
+            。 当您将鼠标悬停在注释图标上时，您可以获得事件文本和 活动标签。 您可以
+            按住CTRL或CMD在grafana上单击图形（或拖动区域）直接添加注释事件。 这些注释将存储在Grafana的注释数据库中。
+					</p>
+					查看<a class="external-link" target="_blank" href="http://docs.grafana.org/reference/annotations/">注释文档</a> 了解更多信息。
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="annotations-basic-settings" ng-if="ctrl.mode === 'edit' || ctrl.mode === 'new'">
+		<div class="gf-form-group">
+			<h5 class="section-heading">通用</h5>
+			<div class="gf-form-inline">
+				<div class="gf-form">
+					<span class="gf-form-label width-7">名称</span>
+					<input type="text" class="gf-form-input width-20" ng-model='ctrl.currentAnnotation.name' placeholder="name"></input>
+				</div>
+				<div class="gf-form">
+					<span class="gf-form-label width-7">数据源</span>
+					<div class="gf-form-select-wrapper">
+						<select class="gf-form-input" ng-model="ctrl.currentAnnotation.datasource" ng-options="f.name as f.name for f in ctrl.datasources" ng-change="ctrl.datasourceChanged()"></select>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="gf-form-group">
+			<div class="gf-form-inline">
+				<gf-form-switch class="gf-form" label="Enabled" checked="ctrl.currentAnnotation.enable" label-class="width-7">
+				</gf-form-switch>
+				<gf-form-switch class="gf-form" label="Hidden" tooltip="Hides the annotation query toggle from showing at the top of the dashboard" checked="ctrl.currentAnnotation.hide" label-class="width-7">
+				</gf-form-switch>
+				<div class="gf-form">
+					<label class="gf-form-label width-9">颜色</label>
+					<span class="gf-form-label">
+						<color-picker color="ctrl.currentAnnotation.iconColor" onChange="ctrl.onColorChange"></color-picker>
+					</span>
+				</div>
+			</div>
+		</div>
+
+		<h5 class="section-heading">查询</h5>
+		<rebuild-on-change property="ctrl.currentDatasource">
+			<plugin-component type="annotations-query-ctrl">
+			</plugin-component>
+		</rebuild-on-change>
+
+		<div class="gf-form">
+			<div class="gf-form-button-row p-y-0">
+				<button ng-show="ctrl.mode === 'new'" type="button" class="btn gf-form-button btn-success" ng-click="ctrl.add()">添加</button>
+				<button ng-show="ctrl.mode === 'edit'" type="button" class="btn btn-success pull-left" ng-click="ctrl.update()">更新</button>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,32 @@
+<page-header model="ctrl.navModel"></page-header>
+
+<div class="page-container page-body">
+   <table class="filter-table">
+    <thead>
+      <th><strong>名称</strong></th>
+      <th><strong>快照网址</strong></th>
+      <th style="width: 70px"></th>
+      <th style="width: 25px"></th>
+		</thead>
+		<tr ng-repeat="snapshot in ctrl.snapshots">
+      <td>
+				<a href="dashboard/snapshot/{{snapshot.key}}">{{snapshot.name}}</a>
+      </td>
+      <td >
+        <a href="dashboard/snapshot/{{snapshot.key}}">dashboard/snapshot/{{snapshot.key}}</a>
+      </td>
+      <td class="text-center">
+        <a href="dashboard/snapshot/{{snapshot.key}}" class="btn btn-inverse btn-mini">
+          <i class="fa fa-eye"></i>
+          查看
+        </a>
+      </td>
+      <td  class="text-right">
+        <a ng-click="ctrl.removeSnapshot(snapshot)" class="btn btn-danger btn-mini">
+          <i class="fa fa-remove"></i>
+        </a>
+      </td>
+    </tr>
+  </table>
+
+</div>

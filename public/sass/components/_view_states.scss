@@ -1,0 +1,45 @@
+.page-kiosk-mode {
+  .sidemenu,
+  .navbar {
+    display: none;
+  }
+  .scroll-canvas--dashboard {
+    height: 100%;
+  }
+}
+
+.playlist-active,
+.user-activity-low {
+  .react-resizable-handle .add-row-panel-hint,
+  .dash-row-menu-container,
+  .navbar-button--refresh,
+  .navbar-buttons--zoom,
+  .navbar-buttons--actions,
+  .panel-menu-container,
+  .panel-info-corner--info,
+  .panel-info-corner--links {
+    opacity: 0;
+  }
+
+  .navbar {
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .navbar-page-btn {
+    border-color: transparent;
+    background: transparent;
+    transform: translate3d(-40px, 0, 0);
+    i {
+      opacity: 0;
+    }
+  }
+
+  .sidemenu {
+    display: none;
+  }
+
+  .gf-timepicker-nav-btn {
+    transform: translate3d(40px, 0, 0);
+  }
+}

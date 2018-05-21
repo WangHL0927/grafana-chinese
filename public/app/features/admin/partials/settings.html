@@ -1,0 +1,23 @@
+<page-header model="ctrl.navModel"></page-header>
+
+<div class="page-container page-body">
+
+	<div class="grafana-info-box span8" style="margin: 20px 0 25px 0">
+    这些系统设置在grafana.ini或custom.ini中定义（或在ENV变量中重写）。
+    要改变这些设置，你需要重启grafana。
+	</div>
+
+	<table class="filter-table">
+		<tr ng-repeat-start="(secName, secValue) in settings">
+			<td class="admin-settings-section">{{secName}}</td>
+			<td></td>
+		</tr>
+		<tr ng-repeat="(keyName, keyValue) in secValue" ng-repeat-end>
+			<td style="padding-left: 25px;">{{keyName}}</td>
+			<td>{{keyValue}}</td>
+		</tr>
+	</table>
+</div>
+
+
+

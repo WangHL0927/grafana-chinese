@@ -1,0 +1,49 @@
+<page-header model="navModel"></page-header>
+
+<div class="page-container page-body">
+  <div class="signup">
+    <h3 class="p-b-1">就要完成了。</h3>
+    <div class="p-b-1">
+      我们只需要再添加一小部分 <br> 信息即可创建您的帐户。
+    </div>
+    <form name="signUpForm" class="login-form gf-form-group">
+      <div class="gf-form" ng-if="verifyEmailEnabled">
+        <span class="gf-form-label width-9">
+          邮件验证码<tip>邮件验证码（已发送到您的邮箱）</tip>
+        </span>
+        <input type="text" class="gf-form-input max-width-14" ng-model="formModel.code" required></input>
+      </div>
+
+      <div class="gf-form" ng-if="!autoAssignOrg">
+        <span class="gf-form-label width-9">组织名</span>
+        <input type="text" name="orgName" class="gf-form-input max-width-14" ng-model="formModel.orgName" placeholder="Name your organization">
+      </div>
+
+      <div class="gf-form">
+        <span class="gf-form-label width-9">姓名</span>
+        <input type="text" name="name" class="gf-form-input max-width-14" ng-model="formModel.name" placeholder="(optional)">
+      </div>
+      <div class="gf-form">
+        <span class="gf-form-label width-9">邮箱</span>
+        <input type="text" class="gf-form-input max-width-14" required ng-model="formModel.username" placeholder="Email" autocomplete="off">
+      </div>
+      <div class="gf-form">
+        <span class="gf-form-label width-9">密码</span>
+        <input type="password" class="gf-form-input max-width-14" required ng-model="formModel.password" id="inputPassword" placeholder="password" autocomplete="off">
+      </div>
+
+      <div class="signup__password-strength">
+        <password-strength password="formModel.password"></password-strength>
+      </div>
+
+      <div class="gf-form-button-row p-t-3">
+        <button type="submit" class="btn btn-success" ng-click="ctrl.submit();" ng-disabled="!signUpForm.$valid">
+          注册
+        </button>
+        <a href="login" class="btn btn-inverse">
+            返回
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
