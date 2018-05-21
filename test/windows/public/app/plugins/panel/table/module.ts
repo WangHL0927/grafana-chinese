@@ -154,11 +154,6 @@ class TablePanelCtrl extends MetricsPanelCtrl {
     this.render();
   }
 
-  moveQuery(target, direction) {
-    super.moveQuery(target, direction);
-    super.refresh();
-  }
-
   exportCsv() {
     var scope = this.$scope.$new(true);
     scope.tableData = this.renderer.render_values();
@@ -223,13 +218,13 @@ class TablePanelCtrl extends MetricsPanelCtrl {
     }
 
     function renderPanel() {
-      var panelElem = elem.parents('.panel-content');
+      var panelElem = elem.parents('.panel');
       var rootElem = elem.find('.table-panel-scroll');
       var tbodyElem = elem.find('tbody');
       var footerElem = elem.find('.table-panel-footer');
 
       elem.css({ 'font-size': panel.fontSize });
-      panelElem.addClass('table-panel-content');
+      panelElem.addClass('table-panel-wrapper');
 
       appendTableRows(tbodyElem);
       appendPaginationControls(footerElem);

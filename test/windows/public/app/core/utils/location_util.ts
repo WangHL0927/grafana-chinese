@@ -1,11 +1,6 @@
 import config from 'app/core/config';
 
-// Slash encoding for angular location provider, see https://github.com/angular/angular.js/issues/10479
-const SLASH = '<SLASH>';
-export const decodePathComponent = (pc: string) => decodeURIComponent(pc).replace(new RegExp(SLASH, 'g'), '/');
-export const encodePathComponent = (pc: string) => encodeURIComponent(pc.replace(/\//g, SLASH));
-
-export const stripBaseFromUrl = url => {
+const _stripBaseFromUrl = url => {
   const appSubUrl = config.appSubUrl;
   const stripExtraChars = appSubUrl.endsWith('/') ? 1 : 0;
   const urlWithoutBase =
@@ -14,4 +9,6 @@ export const stripBaseFromUrl = url => {
   return urlWithoutBase;
 };
 
-export default { stripBaseFromUrl };
+export default {
+  stripBaseFromUrl: _stripBaseFromUrl,
+};

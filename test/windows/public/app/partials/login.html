@@ -1,7 +1,8 @@
 <div class="login container">
   <div class="login-content">
     <div class="login-branding">
-      <img class="logo-icon" src="public/img/grafana_icon.png" alt="Grafana" />
+      <img class="logo-icon" src="public/img/grafana_icon.svg" alt="Grafana" />
+      <i class="icon-gf icon-gf-grafana_wordmark"></i>
     </div>
     <div class="login-inner-box">
       <form name="loginForm" class="login-form-group gf-form-group" ng-hide="disableLoginForm">
@@ -15,11 +16,11 @@
         </div>
         <div class="login-button-group">
           <button type="submit" class="btn btn-large p-x-2" ng-click="submit();" ng-class="{'btn-inverse': !loginForm.$valid, 'btn-primary': loginForm.$valid}">
-            登录
+            Log In
           </button>
             <div class="small login-button-forgot-password">
               <a href="user/password/send-reset-email">
-                忘记密码？
+                Forgot your password?
               </a>
           </div>
         </div>

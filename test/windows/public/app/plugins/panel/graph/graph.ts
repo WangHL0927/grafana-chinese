@@ -443,8 +443,7 @@ function graphDirective(timeSrv, popoverSrv, contextSrv) {
 
           // Expand ticks for pretty view
           min = Math.floor(min / tickStep) * tickStep;
-          // 1.01 is 101% - ensure we have enough space for last bar
-          max = Math.ceil(max * 1.01 / tickStep) * tickStep;
+          max = Math.ceil(max / tickStep) * tickStep;
 
           ticks = [];
           for (let i = min; i <= max; i += tickStep) {
@@ -674,7 +673,7 @@ function graphDirective(timeSrv, popoverSrv, contextSrv) {
           return;
         }
 
-        if ((ranges.ctrlKey || ranges.metaKey) && (dashboard.meta.canEdit || dashboard.meta.canMakeEditable)) {
+        if ((ranges.ctrlKey || ranges.metaKey) && dashboard.meta.canEdit) {
           // Add annotation
           setTimeout(() => {
             eventManager.updateTime(ranges.xaxis);
@@ -695,7 +694,7 @@ function graphDirective(timeSrv, popoverSrv, contextSrv) {
           return;
         }
 
-        if ((pos.ctrlKey || pos.metaKey) && (dashboard.meta.canEdit || dashboard.meta.canMakeEditable)) {
+        if ((pos.ctrlKey || pos.metaKey) && dashboard.meta.canEdit) {
           // Skip if range selected (added in "plotselected" event handler)
           let isRangeSelection = pos.x !== pos.x1;
           if (!isRangeSelection) {

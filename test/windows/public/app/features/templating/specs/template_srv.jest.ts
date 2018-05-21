@@ -136,11 +136,6 @@ describe('templateSrv', function() {
       var target = _templateSrv.replace('this=${test:pipe}', {});
       expect(target).toBe('this=value1|value2');
     });
-
-    it('should replace ${test:pipe} with piped value and $test with globbed value', function() {
-      var target = _templateSrv.replace('${test:pipe},$test', {}, 'glob');
-      expect(target).toBe('value1|value2,{value1,value2}');
-    });
   });
 
   describe('variable with all option', function() {
@@ -168,11 +163,6 @@ describe('templateSrv', function() {
     it('should replace ${test:glob} with formatted all value', function() {
       var target = _templateSrv.replace('this.${test:glob}.filters', {});
       expect(target).toBe('this.{value1,value2}.filters');
-    });
-
-    it('should replace ${test:pipe} with piped value and $test with globbed value', function() {
-      var target = _templateSrv.replace('${test:pipe},$test', {}, 'glob');
-      expect(target).toBe('value1|value2,{value1,value2}');
     });
   });
 

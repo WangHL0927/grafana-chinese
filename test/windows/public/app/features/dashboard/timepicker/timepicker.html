@@ -17,7 +17,7 @@
 		<i class="fa fa-clock-o"></i>
 		<span ng-bind="ctrl.rangeString"></span>
 		<span ng-show="ctrl.isUtc" class="gf-timepicker-utc">UTC</span>
-		<span ng-show="ctrl.dashboard.refresh" class="text-warning">&nbsp; 刷新频率 {{ctrl.dashboard.refresh}}</span>
+		<span ng-show="ctrl.dashboard.refresh" class="text-warning">&nbsp; Refresh every {{ctrl.dashboard.refresh}}</span>
 	</button>
 
 	<button class="btn navbar-button navbar-button--refresh" ng-click="ctrl.timeSrv.refreshDashboard()">
@@ -27,9 +27,9 @@
 
 <div ng-if="ctrl.isOpen" class="gf-timepicker-dropdown">
   <form name="timeForm" class="gf-timepicker-absolute-section">
-    <h3 class="section-heading">自定义范围</h3>
+    <h3 class="section-heading">Custom range</h3>
 
-    <label class="small">起始:</label>
+    <label class="small">From:</label>
     <div class="gf-form-inline">
       <div class="gf-form max-width-28">
         <input type="text" class="gf-form-input input-large" ng-model="ctrl.editTimeRaw.from" input-datetime>
@@ -46,7 +46,7 @@
     </div>
 
 
-    <label class="small">终止:</label>
+    <label class="small">To:</label>
     <div class="gf-form-inline">
       <div class="gf-form max-width-28">
         <input type="text" class="gf-form-input input-large" ng-model="ctrl.editTimeRaw.to" input-datetime>
@@ -62,19 +62,19 @@
       <datepicker ng-model="ctrl.absolute.toJs" class="gf-timepicker-component" show-weeks="false" starting-day="ctrl.firstDayOfWeek" ng-change="ctrl.absoluteToChanged()"></datepicker>
     </div>
 
-    <label class="small">刷新频率:</label>
+    <label class="small">Refreshing every:</label>
     <div class="gf-form-inline">
       <div class="gf-form max-width-28">
         <select ng-model="ctrl.refresh.value" class="gf-form-input input-medium" ng-options="f.value as f.text for f in ctrl.refresh.options"></select>
       </div>
       <div class="gf-form">
-        <button type="submit" class="btn gf-form-btn btn-secondary" ng-click="ctrl.applyCustom();" ng-disabled="!timeForm.$valid">确认</button>
+        <button type="submit" class="btn gf-form-btn btn-secondary" ng-click="ctrl.applyCustom();" ng-disabled="!timeForm.$valid">Apply</button>
       </div>
     </div>
   </form>
 
   <div class="gf-timepicker-relative-section">
-    <h3 class="section-heading">快捷范围</h3>
+    <h3 class="section-heading">Quick ranges</h3>
     <ul ng-repeat="group in ctrl.timeOptions">
       <li bindonce ng-repeat='option in group' ng-class="{active: option.active}">
         <a ng-click="ctrl.setRelativeFilter(option)" bo-text="option.display"></a>

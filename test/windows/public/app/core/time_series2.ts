@@ -99,7 +99,6 @@ export default class TimeSeries {
     this.alias = opts.alias;
     this.aliasEscaped = _.escape(opts.alias);
     this.color = opts.color;
-    this.bars = { fillColor: opts.color };
     this.valueFormater = kbn.valueFormats.none;
     this.stats = {};
     this.legend = true;
@@ -113,11 +112,11 @@ export default class TimeSeries {
       dashLength: [],
     };
     this.points = {};
+    this.bars = {};
     this.yaxis = 1;
     this.zindex = 0;
     this.nullPointMode = null;
     delete this.stack;
-    delete this.bars.show;
 
     for (var i = 0; i < overrides.length; i++) {
       var override = overrides[i];
@@ -169,7 +168,7 @@ export default class TimeSeries {
         this.fillBelowTo = override.fillBelowTo;
       }
       if (override.color !== void 0) {
-        this.setColor(override.color);
+        this.color = override.color;
       }
       if (override.transform !== void 0) {
         this.transform = override.transform;
@@ -346,10 +345,5 @@ export default class TimeSeries {
     }
 
     return false;
-  }
-
-  setColor(color) {
-    this.color = color;
-    this.bars.fillColor = color;
   }
 }

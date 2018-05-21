@@ -3,11 +3,11 @@ import config from 'app/core/config';
 
 export let store: IRootStore;
 
-export function createStore(services) {
+export function createStore(backendSrv) {
   store = RootStore.create(
     {},
     {
-      ...services,
+      backendSrv: backendSrv,
       navTree: config.bootData.navTree,
     }
   );

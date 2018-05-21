@@ -74,9 +74,6 @@ export class TemplateSrv {
     if (typeof value === 'string') {
       return luceneEscape(value);
     }
-    if (value instanceof Array && value.length === 0) {
-      return '__empty__';
-    }
     var quotedValues = _.map(value, function(val) {
       return '"' + luceneEscape(val) + '"';
     });
@@ -182,16 +179,16 @@ export class TemplateSrv {
       return target;
     }
 
-    var variable, systemValue, value, fmt;
+    var variable, systemValue, value;
     this.regex.lastIndex = 0;
 
     return target.replace(this.regex, (match, var1, var2, fmt2, var3, fmt3) => {
       variable = this.index[var1 || var2 || var3];
-      fmt = fmt2 || fmt3 || format;
+      format = fmt2 || fmt3 || format;
       if (scopedVars) {
         value = scopedVars[var1 || var2 || var3];
         if (value) {
-          return this.formatValue(value.value, fmt, variable);
+          return this.formatValue(value.value, format, variable);
         }
       }
 
@@ -201,7 +198,7 @@ export class TemplateSrv {
 
       systemValue = this.grafanaVariables[variable.current.value];
       if (systemValue) {
-        return this.formatValue(systemValue, fmt, variable);
+        return this.formatValue(systemValue, format, variable);
       }
 
       value = variable.current.value;
@@ -213,7 +210,7 @@ export class TemplateSrv {
         }
       }
 
-      var res = this.formatValue(value, fmt, variable);
+      var res = this.formatValue(value, format, variable);
       return res;
     });
   }

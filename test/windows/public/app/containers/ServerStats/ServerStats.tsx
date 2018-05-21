@@ -1,5 +1,4 @@
 import React from 'react';
-import { hot } from 'react-hot-loader';
 import { inject, observer } from 'mobx-react';
 import PageHeader from 'app/core/components/PageHeader/PageHeader';
 import IContainerProps from 'app/containers/IContainerProps';
@@ -44,5 +43,3 @@ function StatItem(stat) {
     </tr>
   );
 }
-
-export default hot(module)(ServerStats);
