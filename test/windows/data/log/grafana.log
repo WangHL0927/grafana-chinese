@@ -1,0 +1,601 @@
+t=2018-05-19T20:58:20+0800 lvl=info msg="Starting Grafana" logger=server version=5.1.3 commit=087143285 compiled=2018-05-16T23:39:55+0800
+t=2018-05-19T20:58:20+0800 lvl=info msg="Config loaded from" logger=settings file="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本/conf/defaults.ini"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Path Home" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Path Data" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Path Logs" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data\\log"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Path Plugins" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data\\plugins"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Path Provisioning" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\conf\\provisioning"
+t=2018-05-19T20:58:20+0800 lvl=info msg="App mode production" logger=settings
+t=2018-05-19T20:58:20+0800 lvl=info msg="Initializing DB" logger=sqlstore dbtype=sqlite3
+t=2018-05-19T20:58:20+0800 lvl=info msg="Starting DB migration" logger=migrator
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="create migration_log table"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="create user table"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="add unique index user.login"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="add unique index user.email"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_user_login - v1"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_user_email - v1"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="Rename table user to user_v1 - v1"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="create user table v2"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="create index UQE_user_login - v2"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="create index UQE_user_email - v2"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="copy data_source v1 to v2"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="Drop old table user_v1"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="Add column help_flags1 to user table"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="Update user table charset"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="Add last_seen_at column to user"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="create temp user table v1-7"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="create index IDX_temp_user_email - v1-7"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="create index IDX_temp_user_org_id - v1-7"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="create index IDX_temp_user_code - v1-7"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="create index IDX_temp_user_status - v1-7"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="Update temp_user table charset"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="create star table"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="add unique index star.user_id_dashboard_id"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="create org table v1"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="create index UQE_org_name - v1"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="create org_user table v1"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="create index IDX_org_user_org_id - v1"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="create index UQE_org_user_org_id_user_id - v1"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account to org"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account to org"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account_user to org_user"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account_user to org_user"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="Drop old table account"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="Drop old table account_user"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="Update org table charset"
+t=2018-05-19T20:58:20+0800 lvl=info msg="Executing migration" logger=migrator id="Update org_user table charset"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="Migrate all Read Only Viewers to Viewers"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="create dashboard table"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="add index dashboard.account_id"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="add unique index dashboard_account_id_slug"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="create dashboard_tag table"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="add unique index dashboard_tag.dasboard_id_term"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_dashboard_tag_dashboard_id_term - v1"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="Rename table dashboard to dashboard_v1 - v1"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="create dashboard v2"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="create index IDX_dashboard_org_id - v2"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="create index UQE_dashboard_org_id_slug - v2"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="copy dashboard v1 to v2"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="drop table dashboard_v1"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="alter dashboard.data to mediumtext v1"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="Add column updated_by in dashboard - v2"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="Add column created_by in dashboard - v2"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="Add column gnetId in dashboard"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="Add index for gnetId in dashboard"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="Add column plugin_id in dashboard"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="Add index for plugin_id in dashboard"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="Add index for dashboard_id in dashboard_tag"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="Update dashboard table charset"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="Update dashboard_tag table charset"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="Add column folder_id in dashboard"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="Add column isFolder in dashboard"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="Add column has_acl in dashboard"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="Add column uid in dashboard"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="Update uid column values in dashboard"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="Add unique index dashboard_org_id_uid"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="Remove unique index org_id_slug"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="Update dashboard title length"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="Add unique index for dashboard_org_id_title_folder_id"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="create dashboard_provisioning"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="Rename table dashboard_provisioning to dashboard_provisioning_tmp_qwerty - v1"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="create dashboard_provisioning v2"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="create index IDX_dashboard_provisioning_dashboard_id - v2"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="create index IDX_dashboard_provisioning_dashboard_id_name - v2"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="copy dashboard_provisioning v1 to v2"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="drop dashboard_provisioning_tmp_qwerty"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="create data_source table"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="add index data_source.account_id"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="add unique index data_source.account_id_name"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="drop index IDX_data_source_account_id - v1"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_data_source_account_id_name - v1"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="Rename table data_source to data_source_v1 - v1"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="create data_source table v2"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="create index IDX_data_source_org_id - v2"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="create index UQE_data_source_org_id_name - v2"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="copy data_source v1 to v2"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="Drop old table data_source_v1 #2"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="Add column with_credentials"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="Add secure json data column"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="Update data_source table charset"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="Update initial version to 1"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="Add read_only data column"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="create api_key table"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="add index api_key.account_id"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="add index api_key.key"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="add index api_key.account_id_name"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="drop index IDX_api_key_account_id - v1"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_api_key_key - v1"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="drop index UQE_api_key_account_id_name - v1"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="Rename table api_key to api_key_v1 - v1"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="create api_key table v2"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="create index IDX_api_key_org_id - v2"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="create index UQE_api_key_key - v2"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="create index UQE_api_key_org_id_name - v2"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="copy api_key v1 to v2"
+t=2018-05-19T20:58:21+0800 lvl=info msg="Executing migration" logger=migrator id="Drop old table api_key_v1"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="Update api_key table charset"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="create dashboard_snapshot table v4"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="drop table dashboard_snapshot_v4 #1"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="create dashboard_snapshot table v5 #2"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="create index UQE_dashboard_snapshot_key - v5"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="create index UQE_dashboard_snapshot_delete_key - v5"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="create index IDX_dashboard_snapshot_user_id - v5"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="alter dashboard_snapshot to mediumtext v2"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="Update dashboard_snapshot table charset"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="create quota table v1"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="create index UQE_quota_org_id_user_id_target - v1"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="Update quota table charset"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="create plugin_setting table"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="create index UQE_plugin_setting_org_id_plugin_id - v1"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="Add column plugin_version to plugin_settings"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="Update plugin_setting table charset"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="create session table"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="Drop old table playlist table"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="Drop old table playlist_item table"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="create playlist table v2"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="create playlist item table v2"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="Update playlist table charset"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="Update playlist_item table charset"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="drop preferences table v2"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="drop preferences table v3"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="create preferences table v3"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="Update preferences table charset"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="create alert table v1"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="add index alert org_id & id "
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="add index alert state"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="add index alert dashboard_id"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="create alert_notification table v1"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="Add column is_default"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="add index alert_notification org_id & name"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="Update alert table charset"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="Update alert_notification table charset"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="Drop old annotation table v4"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="create annotation table v5"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="add index annotation 0 v3"
+t=2018-05-19T20:58:22+0800 lvl=info msg="Executing migration" logger=migrator id="add index annotation 1 v3"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="add index annotation 2 v3"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="add index annotation 3 v3"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="add index annotation 4 v3"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="Update annotation table charset"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="Add column region_id to annotation table"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="Drop category_id index"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="Add column tags to annotation table"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="Create annotation_tag table v2"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="Add unique index annotation_tag.annotation_id_tag_id"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="Update alert annotations and set TEXT to empty"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="create test_data table"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="create dashboard_version table v1"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="add index dashboard_version.dashboard_id"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="add unique index dashboard_version.dashboard_id and dashboard_version.version"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="Set dashboard version to 1 where 0"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="save existing dashboard data in dashboard_version table v1"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="alter dashboard_version.data to mediumtext v1"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="create team table"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="add index team.org_id"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="add unique index team_org_id_name"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="create team member table"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="add index team_member.org_id"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="add unique index team_member_org_id_team_id_user_id"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="Add column email to team table"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="create dashboard acl table"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="add index dashboard_acl_dashboard_id"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="add unique index dashboard_acl_dashboard_id_user_id"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="add unique index dashboard_acl_dashboard_id_team_id"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="save default acl rules in dashboard_acl table"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="create tag table"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="add index tag.key_value"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="create login attempt table"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="add index login_attempt.username"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="drop index IDX_login_attempt_username - v1"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="Rename table login_attempt to login_attempt_tmp_qwerty - v1"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="create login_attempt v2"
+t=2018-05-19T20:58:25+0800 lvl=info msg="Executing migration" logger=migrator id="create index IDX_login_attempt_username - v2"
+t=2018-05-19T20:58:26+0800 lvl=info msg="Executing migration" logger=migrator id="copy login_attempt v1 to v2"
+t=2018-05-19T20:58:26+0800 lvl=info msg="Executing migration" logger=migrator id="drop login_attempt_tmp_qwerty"
+t=2018-05-19T20:58:26+0800 lvl=info msg="Executing migration" logger=migrator id="create user auth table"
+t=2018-05-19T20:58:26+0800 lvl=info msg="Executing migration" logger=migrator id="create index IDX_user_auth_auth_module_auth_id - v1"
+t=2018-05-19T20:58:26+0800 lvl=info msg="Executing migration" logger=migrator id="alter user_auth.auth_id to length 190"
+t=2018-05-19T20:58:26+0800 lvl=info msg="Created default admin user: admin"
+t=2018-05-19T20:58:26+0800 lvl=info msg="Starting plugin search" logger=plugins
+t=2018-05-19T20:58:26+0800 lvl=info msg="Plugin dir created" logger=plugins dir="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data\\plugins"
+t=2018-05-19T20:58:26+0800 lvl=info msg="Initializing Alerting" logger=alerting.engine
+t=2018-05-19T20:58:26+0800 lvl=info msg="Initializing CleanUpService" logger=cleanup
+t=2018-05-19T20:58:26+0800 lvl=info msg="Initializing Stream Manager"
+t=2018-05-19T20:58:26+0800 lvl=info msg="Initializing HTTP Server" logger=http.server address=0.0.0.0:3000 protocol=http subUrl= socket=
+t=2018-05-21T09:58:52+0800 lvl=info msg="Starting Grafana" logger=server version=5.1.3 commit=087143285 compiled=2018-05-16T23:39:55+0800
+t=2018-05-21T09:58:52+0800 lvl=info msg="Config loaded from" logger=settings file="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本/conf/defaults.ini"
+t=2018-05-21T09:58:52+0800 lvl=info msg="Path Home" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本"
+t=2018-05-21T09:58:52+0800 lvl=info msg="Path Data" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data"
+t=2018-05-21T09:58:52+0800 lvl=info msg="Path Logs" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data\\log"
+t=2018-05-21T09:58:52+0800 lvl=info msg="Path Plugins" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data\\plugins"
+t=2018-05-21T09:58:52+0800 lvl=info msg="Path Provisioning" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\conf\\provisioning"
+t=2018-05-21T09:58:52+0800 lvl=info msg="App mode production" logger=settings
+t=2018-05-21T09:58:52+0800 lvl=info msg="Initializing DB" logger=sqlstore dbtype=sqlite3
+t=2018-05-21T09:58:52+0800 lvl=info msg="Starting DB migration" logger=migrator
+t=2018-05-21T09:58:52+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account to org"
+t=2018-05-21T09:58:52+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account to org"
+t=2018-05-21T09:58:52+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account_user to org_user"
+t=2018-05-21T09:58:52+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account_user to org_user"
+t=2018-05-21T09:58:52+0800 lvl=info msg="Starting plugin search" logger=plugins
+t=2018-05-21T09:58:52+0800 lvl=info msg="Initializing Alerting" logger=alerting.engine
+t=2018-05-21T09:58:52+0800 lvl=info msg="Initializing CleanUpService" logger=cleanup
+t=2018-05-21T09:58:52+0800 lvl=info msg="Initializing Stream Manager"
+t=2018-05-21T09:58:52+0800 lvl=info msg="Initializing HTTP Server" logger=http.server address=0.0.0.0:3000 protocol=http subUrl= socket=
+t=2018-05-21T09:59:06+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/ status=302 remote_addr=[::1] time_ms=14 size=29 referer=
+t=2018-05-21T09:59:53+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/manifest.36b7040988f1795e196b.js status=404 remote_addr=[::1] time_ms=10 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T09:59:53+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=12 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T09:59:53+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/vendor.7bf3a4849cf75d02739a.js status=404 remote_addr=[::1] time_ms=14 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T09:59:53+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/manifest.36b7040988f1795e196b.js status=404 remote_addr=[::1] time_ms=7 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T09:59:53+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/vendor.7bf3a4849cf75d02739a.js status=404 remote_addr=[::1] time_ms=9 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T09:59:53+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=5 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:08+0800 lvl=info msg="Starting Grafana" logger=server version=5.1.3 commit=087143285 compiled=2018-05-16T23:39:55+0800
+t=2018-05-21T10:00:08+0800 lvl=info msg="Config loaded from" logger=settings file="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本/conf/defaults.ini"
+t=2018-05-21T10:00:08+0800 lvl=info msg="Path Home" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本"
+t=2018-05-21T10:00:08+0800 lvl=info msg="Path Data" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data"
+t=2018-05-21T10:00:08+0800 lvl=info msg="Path Logs" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data\\log"
+t=2018-05-21T10:00:08+0800 lvl=info msg="Path Plugins" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data\\plugins"
+t=2018-05-21T10:00:08+0800 lvl=info msg="Path Provisioning" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\conf\\provisioning"
+t=2018-05-21T10:00:08+0800 lvl=info msg="App mode production" logger=settings
+t=2018-05-21T10:00:08+0800 lvl=info msg="Initializing DB" logger=sqlstore dbtype=sqlite3
+t=2018-05-21T10:00:08+0800 lvl=info msg="Starting DB migration" logger=migrator
+t=2018-05-21T10:00:08+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account to org"
+t=2018-05-21T10:00:08+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account to org"
+t=2018-05-21T10:00:08+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account_user to org_user"
+t=2018-05-21T10:00:08+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account_user to org_user"
+t=2018-05-21T10:00:08+0800 lvl=info msg="Starting plugin search" logger=plugins
+t=2018-05-21T10:00:08+0800 lvl=info msg="Initializing Alerting" logger=alerting.engine
+t=2018-05-21T10:00:08+0800 lvl=info msg="Initializing CleanUpService" logger=cleanup
+t=2018-05-21T10:00:08+0800 lvl=info msg="Initializing Stream Manager"
+t=2018-05-21T10:00:08+0800 lvl=info msg="Initializing HTTP Server" logger=http.server address=0.0.0.0:3000 protocol=http subUrl= socket=
+t=2018-05-21T10:00:11+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/manifest.36b7040988f1795e196b.js status=404 remote_addr=[::1] time_ms=11 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:11+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/vendor.7bf3a4849cf75d02739a.js status=404 remote_addr=[::1] time_ms=13 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:11+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=18 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:11+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/manifest.36b7040988f1795e196b.js status=404 remote_addr=[::1] time_ms=6 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:11+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/vendor.7bf3a4849cf75d02739a.js status=404 remote_addr=[::1] time_ms=7 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:11+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=6 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:12+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/manifest.36b7040988f1795e196b.js status=404 remote_addr=[::1] time_ms=10 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:12+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=11 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:12+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/vendor.7bf3a4849cf75d02739a.js status=404 remote_addr=[::1] time_ms=15 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:12+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/manifest.36b7040988f1795e196b.js status=404 remote_addr=[::1] time_ms=8 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:12+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/vendor.7bf3a4849cf75d02739a.js status=404 remote_addr=[::1] time_ms=6 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:12+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=7 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:22+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/manifest.36b7040988f1795e196b.js status=404 remote_addr=[::1] time_ms=12 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:22+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/vendor.7bf3a4849cf75d02739a.js status=404 remote_addr=[::1] time_ms=13 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:22+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=17 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:22+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/manifest.36b7040988f1795e196b.js status=404 remote_addr=[::1] time_ms=7 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:22+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/vendor.7bf3a4849cf75d02739a.js status=404 remote_addr=[::1] time_ms=6 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:22+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=6 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:28+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=15 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:28+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/vendor.7bf3a4849cf75d02739a.js status=404 remote_addr=[::1] time_ms=18 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:28+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/manifest.36b7040988f1795e196b.js status=404 remote_addr=[::1] time_ms=22 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:28+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/manifest.36b7040988f1795e196b.js status=404 remote_addr=[::1] time_ms=6 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:28+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/vendor.7bf3a4849cf75d02739a.js status=404 remote_addr=[::1] time_ms=8 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:28+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=6 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:29+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/vendor.7bf3a4849cf75d02739a.js status=404 remote_addr=[::1] time_ms=14 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:29+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/manifest.36b7040988f1795e196b.js status=404 remote_addr=[::1] time_ms=17 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:29+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=20 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:29+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/manifest.36b7040988f1795e196b.js status=404 remote_addr=[::1] time_ms=6 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:29+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/vendor.7bf3a4849cf75d02739a.js status=404 remote_addr=[::1] time_ms=7 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:29+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=7 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:32+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/manifest.36b7040988f1795e196b.js status=404 remote_addr=[::1] time_ms=14 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:32+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/vendor.7bf3a4849cf75d02739a.js status=404 remote_addr=[::1] time_ms=17 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:32+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=20 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:32+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/manifest.36b7040988f1795e196b.js status=404 remote_addr=[::1] time_ms=6 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:32+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/vendor.7bf3a4849cf75d02739a.js status=404 remote_addr=[::1] time_ms=6 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:32+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=7 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:47+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/manifest.36b7040988f1795e196b.js status=404 remote_addr=[::1] time_ms=13 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:47+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/vendor.7bf3a4849cf75d02739a.js status=404 remote_addr=[::1] time_ms=15 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:47+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=17 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:47+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/manifest.36b7040988f1795e196b.js status=404 remote_addr=[::1] time_ms=7 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:47+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/vendor.7bf3a4849cf75d02739a.js status=404 remote_addr=[::1] time_ms=8 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:47+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=6 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:48+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/vendor.7bf3a4849cf75d02739a.js status=404 remote_addr=[::1] time_ms=10 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:48+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=12 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:48+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/manifest.36b7040988f1795e196b.js status=404 remote_addr=[::1] time_ms=17 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:48+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/manifest.36b7040988f1795e196b.js status=404 remote_addr=[::1] time_ms=6 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:48+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/vendor.7bf3a4849cf75d02739a.js status=404 remote_addr=[::1] time_ms=6 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:48+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=7 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:49+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/vendor.7bf3a4849cf75d02739a.js status=404 remote_addr=[::1] time_ms=12 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:49+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=11 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:49+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/manifest.36b7040988f1795e196b.js status=404 remote_addr=[::1] time_ms=13 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:49+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/manifest.36b7040988f1795e196b.js status=404 remote_addr=[::1] time_ms=7 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:49+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/vendor.7bf3a4849cf75d02739a.js status=404 remote_addr=[::1] time_ms=14 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:00:49+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=7 size=10244 referer=http://localhost:3000/login
+t=2018-05-21T10:08:26+0800 lvl=info msg="Starting Grafana" logger=server version=5.1.3 commit=087143285 compiled=2018-05-16T23:39:55+0800
+t=2018-05-21T10:08:26+0800 lvl=info msg="Config loaded from" logger=settings file="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本/conf/defaults.ini"
+t=2018-05-21T10:08:26+0800 lvl=info msg="Path Home" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本"
+t=2018-05-21T10:08:26+0800 lvl=info msg="Path Data" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data"
+t=2018-05-21T10:08:26+0800 lvl=info msg="Path Logs" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data\\log"
+t=2018-05-21T10:08:26+0800 lvl=info msg="Path Plugins" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data\\plugins"
+t=2018-05-21T10:08:26+0800 lvl=info msg="Path Provisioning" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\conf\\provisioning"
+t=2018-05-21T10:08:26+0800 lvl=info msg="App mode production" logger=settings
+t=2018-05-21T10:08:26+0800 lvl=info msg="Initializing DB" logger=sqlstore dbtype=sqlite3
+t=2018-05-21T10:08:26+0800 lvl=info msg="Starting DB migration" logger=migrator
+t=2018-05-21T10:08:26+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account to org"
+t=2018-05-21T10:08:26+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account to org"
+t=2018-05-21T10:08:26+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account_user to org_user"
+t=2018-05-21T10:08:26+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account_user to org_user"
+t=2018-05-21T10:08:26+0800 lvl=info msg="Starting plugin search" logger=plugins
+t=2018-05-21T10:08:26+0800 lvl=info msg="Initializing Alerting" logger=alerting.engine
+t=2018-05-21T10:08:26+0800 lvl=info msg="Initializing CleanUpService" logger=cleanup
+t=2018-05-21T10:08:26+0800 lvl=info msg="Initializing Stream Manager"
+t=2018-05-21T10:08:26+0800 lvl=info msg="Initializing HTTP Server" logger=http.server address=0.0.0.0:3000 protocol=http subUrl= socket=
+t=2018-05-21T10:18:37+0800 lvl=info msg="Starting Grafana" logger=server version=5.1.3 commit=087143285 compiled=2018-05-16T23:39:55+0800
+t=2018-05-21T10:18:37+0800 lvl=info msg="Config loaded from" logger=settings file="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本/conf/defaults.ini"
+t=2018-05-21T10:18:37+0800 lvl=info msg="Path Home" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本"
+t=2018-05-21T10:18:37+0800 lvl=info msg="Path Data" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data"
+t=2018-05-21T10:18:37+0800 lvl=info msg="Path Logs" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data\\log"
+t=2018-05-21T10:18:37+0800 lvl=info msg="Path Plugins" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data\\plugins"
+t=2018-05-21T10:18:37+0800 lvl=info msg="Path Provisioning" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\conf\\provisioning"
+t=2018-05-21T10:18:37+0800 lvl=info msg="App mode production" logger=settings
+t=2018-05-21T10:18:37+0800 lvl=info msg="Initializing DB" logger=sqlstore dbtype=sqlite3
+t=2018-05-21T10:18:37+0800 lvl=info msg="Starting DB migration" logger=migrator
+t=2018-05-21T10:18:37+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account to org"
+t=2018-05-21T10:18:37+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account to org"
+t=2018-05-21T10:18:37+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account_user to org_user"
+t=2018-05-21T10:18:37+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account_user to org_user"
+t=2018-05-21T10:18:37+0800 lvl=info msg="Starting plugin search" logger=plugins
+t=2018-05-21T10:18:37+0800 lvl=info msg="Initializing CleanUpService" logger=cleanup
+t=2018-05-21T10:18:37+0800 lvl=info msg="Initializing Alerting" logger=alerting.engine
+t=2018-05-21T10:18:37+0800 lvl=info msg="Initializing Stream Manager"
+t=2018-05-21T10:18:37+0800 lvl=info msg="Initializing HTTP Server" logger=http.server address=0.0.0.0:3000 protocol=http subUrl= socket=
+t=2018-05-21T10:19:12+0800 lvl=info msg="Starting Grafana" logger=server version=5.1.3 commit=087143285 compiled=2018-05-16T23:39:55+0800
+t=2018-05-21T10:19:12+0800 lvl=info msg="Config loaded from" logger=settings file="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本/conf/defaults.ini"
+t=2018-05-21T10:19:12+0800 lvl=info msg="Path Home" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本"
+t=2018-05-21T10:19:12+0800 lvl=info msg="Path Data" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data"
+t=2018-05-21T10:19:12+0800 lvl=info msg="Path Logs" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data\\log"
+t=2018-05-21T10:19:12+0800 lvl=info msg="Path Plugins" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data\\plugins"
+t=2018-05-21T10:19:12+0800 lvl=info msg="Path Provisioning" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\conf\\provisioning"
+t=2018-05-21T10:19:12+0800 lvl=info msg="App mode production" logger=settings
+t=2018-05-21T10:19:12+0800 lvl=info msg="Initializing DB" logger=sqlstore dbtype=sqlite3
+t=2018-05-21T10:19:12+0800 lvl=info msg="Starting DB migration" logger=migrator
+t=2018-05-21T10:19:12+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account to org"
+t=2018-05-21T10:19:12+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account to org"
+t=2018-05-21T10:19:12+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account_user to org_user"
+t=2018-05-21T10:19:12+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account_user to org_user"
+t=2018-05-21T10:19:12+0800 lvl=info msg="Starting plugin search" logger=plugins
+t=2018-05-21T10:19:12+0800 lvl=info msg="Initializing Alerting" logger=alerting.engine
+t=2018-05-21T10:19:12+0800 lvl=info msg="Initializing CleanUpService" logger=cleanup
+t=2018-05-21T10:19:12+0800 lvl=info msg="Initializing Stream Manager"
+t=2018-05-21T10:19:12+0800 lvl=info msg="Initializing HTTP Server" logger=http.server address=0.0.0.0:3000 protocol=http subUrl= socket=
+t=2018-05-21T10:19:20+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/ status=302 remote_addr=[::1] time_ms=15 size=29 referer=
+t=2018-05-21T10:24:57+0800 lvl=info msg="Starting Grafana" logger=server version=5.1.3 commit=087143285 compiled=2018-05-16T23:39:55+0800
+t=2018-05-21T10:24:57+0800 lvl=info msg="Config loaded from" logger=settings file="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本/conf/defaults.ini"
+t=2018-05-21T10:24:57+0800 lvl=info msg="Path Home" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本"
+t=2018-05-21T10:24:57+0800 lvl=info msg="Path Data" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data"
+t=2018-05-21T10:24:57+0800 lvl=info msg="Path Logs" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data\\log"
+t=2018-05-21T10:24:57+0800 lvl=info msg="Path Plugins" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data\\plugins"
+t=2018-05-21T10:24:57+0800 lvl=info msg="Path Provisioning" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\conf\\provisioning"
+t=2018-05-21T10:24:57+0800 lvl=info msg="App mode production" logger=settings
+t=2018-05-21T10:24:57+0800 lvl=info msg="Initializing DB" logger=sqlstore dbtype=sqlite3
+t=2018-05-21T10:24:57+0800 lvl=info msg="Starting DB migration" logger=migrator
+t=2018-05-21T10:24:57+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account to org"
+t=2018-05-21T10:24:57+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account to org"
+t=2018-05-21T10:24:57+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account_user to org_user"
+t=2018-05-21T10:24:57+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account_user to org_user"
+t=2018-05-21T10:24:57+0800 lvl=info msg="Starting plugin search" logger=plugins
+t=2018-05-21T10:24:57+0800 lvl=info msg="Initializing Alerting" logger=alerting.engine
+t=2018-05-21T10:24:57+0800 lvl=info msg="Initializing CleanUpService" logger=cleanup
+t=2018-05-21T10:24:57+0800 lvl=info msg="Initializing Stream Manager"
+t=2018-05-21T10:24:57+0800 lvl=info msg="Initializing HTTP Server" logger=http.server address=0.0.0.0:3000 protocol=http subUrl= socket=
+t=2018-05-21T10:25:49+0800 lvl=info msg="Starting Grafana" logger=server version=5.1.3 commit=087143285 compiled=2018-05-16T23:39:55+0800
+t=2018-05-21T10:25:49+0800 lvl=info msg="Config loaded from" logger=settings file="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本/conf/defaults.ini"
+t=2018-05-21T10:25:49+0800 lvl=info msg="Path Home" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本"
+t=2018-05-21T10:25:49+0800 lvl=info msg="Path Data" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data"
+t=2018-05-21T10:25:49+0800 lvl=info msg="Path Logs" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data\\log"
+t=2018-05-21T10:25:49+0800 lvl=info msg="Path Plugins" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data\\plugins"
+t=2018-05-21T10:25:49+0800 lvl=info msg="Path Provisioning" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\conf\\provisioning"
+t=2018-05-21T10:25:49+0800 lvl=info msg="App mode production" logger=settings
+t=2018-05-21T10:25:49+0800 lvl=info msg="Initializing DB" logger=sqlstore dbtype=sqlite3
+t=2018-05-21T10:25:49+0800 lvl=info msg="Starting DB migration" logger=migrator
+t=2018-05-21T10:25:49+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account to org"
+t=2018-05-21T10:25:49+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account to org"
+t=2018-05-21T10:25:49+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account_user to org_user"
+t=2018-05-21T10:25:49+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account_user to org_user"
+t=2018-05-21T10:25:49+0800 lvl=info msg="Starting plugin search" logger=plugins
+t=2018-05-21T10:25:49+0800 lvl=info msg="Initializing Alerting" logger=alerting.engine
+t=2018-05-21T10:25:49+0800 lvl=info msg="Initializing CleanUpService" logger=cleanup
+t=2018-05-21T10:25:49+0800 lvl=info msg="Initializing Stream Manager"
+t=2018-05-21T10:25:49+0800 lvl=info msg="Initializing HTTP Server" logger=http.server address=0.0.0.0:3000 protocol=http subUrl= socket=
+t=2018-05-21T11:12:11+0800 lvl=info msg="Starting Grafana" logger=server version=5.1.3 commit=087143285 compiled=2018-05-16T23:39:55+0800
+t=2018-05-21T11:12:11+0800 lvl=info msg="Config loaded from" logger=settings file="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本/conf/defaults.ini"
+t=2018-05-21T11:12:11+0800 lvl=info msg="Path Home" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本"
+t=2018-05-21T11:12:11+0800 lvl=info msg="Path Data" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data"
+t=2018-05-21T11:12:11+0800 lvl=info msg="Path Logs" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data\\log"
+t=2018-05-21T11:12:11+0800 lvl=info msg="Path Plugins" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data\\plugins"
+t=2018-05-21T11:12:11+0800 lvl=info msg="Path Provisioning" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\conf\\provisioning"
+t=2018-05-21T11:12:11+0800 lvl=info msg="App mode production" logger=settings
+t=2018-05-21T11:12:11+0800 lvl=info msg="Initializing DB" logger=sqlstore dbtype=sqlite3
+t=2018-05-21T11:12:11+0800 lvl=info msg="Starting DB migration" logger=migrator
+t=2018-05-21T11:12:11+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account to org"
+t=2018-05-21T11:12:11+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account to org"
+t=2018-05-21T11:12:11+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account_user to org_user"
+t=2018-05-21T11:12:11+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account_user to org_user"
+t=2018-05-21T11:12:11+0800 lvl=info msg="Starting plugin search" logger=plugins
+t=2018-05-21T11:12:11+0800 lvl=info msg="Initializing Alerting" logger=alerting.engine
+t=2018-05-21T11:12:11+0800 lvl=info msg="Initializing CleanUpService" logger=cleanup
+t=2018-05-21T11:12:11+0800 lvl=info msg="Initializing Stream Manager"
+t=2018-05-21T11:12:11+0800 lvl=info msg="Initializing HTTP Server" logger=http.server address=0.0.0.0:3000 protocol=http subUrl= socket=
+t=2018-05-21T11:12:15+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/ status=302 remote_addr=[::1] time_ms=23 size=29 referer=
+t=2018-05-21T11:31:12+0800 lvl=info msg="Starting Grafana" logger=server version=5.1.3 commit=087143285 compiled=2018-05-16T23:39:55+0800
+t=2018-05-21T11:31:12+0800 lvl=info msg="Config loaded from" logger=settings file="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本/conf/defaults.ini"
+t=2018-05-21T11:31:12+0800 lvl=info msg="Path Home" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本"
+t=2018-05-21T11:31:12+0800 lvl=info msg="Path Data" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data"
+t=2018-05-21T11:31:12+0800 lvl=info msg="Path Logs" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data\\log"
+t=2018-05-21T11:31:12+0800 lvl=info msg="Path Plugins" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data\\plugins"
+t=2018-05-21T11:31:12+0800 lvl=info msg="Path Provisioning" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\conf\\provisioning"
+t=2018-05-21T11:31:12+0800 lvl=info msg="App mode production" logger=settings
+t=2018-05-21T11:31:12+0800 lvl=info msg="Initializing DB" logger=sqlstore dbtype=sqlite3
+t=2018-05-21T11:31:12+0800 lvl=info msg="Starting DB migration" logger=migrator
+t=2018-05-21T11:31:12+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account to org"
+t=2018-05-21T11:31:12+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account to org"
+t=2018-05-21T11:31:12+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account_user to org_user"
+t=2018-05-21T11:31:12+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account_user to org_user"
+t=2018-05-21T11:31:12+0800 lvl=info msg="Starting plugin search" logger=plugins
+t=2018-05-21T11:31:12+0800 lvl=info msg="Initializing Alerting" logger=alerting.engine
+t=2018-05-21T11:31:12+0800 lvl=info msg="Initializing CleanUpService" logger=cleanup
+t=2018-05-21T11:31:12+0800 lvl=info msg="Initializing Stream Manager"
+t=2018-05-21T11:31:12+0800 lvl=info msg="Initializing HTTP Server" logger=http.server address=0.0.0.0:3000 protocol=http subUrl= socket=
+t=2018-05-21T11:31:19+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/ status=302 remote_addr=[::1] time_ms=7 size=29 referer=
+t=2018-05-21T11:32:43+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/logout status=302 remote_addr=[::1] time_ms=5 size=29 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T11:43:20+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/app.ff983b3ac3f1e0de3119.js.map status=404 remote_addr=[::1] time_ms=8 size=12680 referer=
+t=2018-05-21T11:43:20+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/manifest.ff983b3ac3f1e0de3119.js.map status=404 remote_addr=[::1] time_ms=13 size=12680 referer=
+t=2018-05-21T11:43:20+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/vendor.ff983b3ac3f1e0de3119.js.map status=404 remote_addr=[::1] time_ms=13 size=12680 referer=
+t=2018-05-21T11:43:20+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/0.ff983b3ac3f1e0de3119.js.map status=404 remote_addr=[::1] time_ms=14 size=12680 referer=
+t=2018-05-21T11:43:26+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/dashboard/new status=404 remote_addr=[::1] time_ms=8 size=12680 referer=
+t=2018-05-21T11:43:26+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/manifest.ff983b3ac3f1e0de3119.js status=404 remote_addr=[::1] time_ms=11 size=12680 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T11:43:26+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/app.ff983b3ac3f1e0de3119.js status=404 remote_addr=[::1] time_ms=14 size=12680 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T11:43:26+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/vendor.ff983b3ac3f1e0de3119.js status=404 remote_addr=[::1] time_ms=18 size=12680 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T11:43:26+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/manifest.ff983b3ac3f1e0de3119.js status=404 remote_addr=[::1] time_ms=7 size=12680 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T11:43:26+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/vendor.ff983b3ac3f1e0de3119.js status=404 remote_addr=[::1] time_ms=9 size=12680 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T11:43:26+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/app.ff983b3ac3f1e0de3119.js status=404 remote_addr=[::1] time_ms=7 size=12680 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T11:43:39+0800 lvl=info msg="Starting Grafana" logger=server version=5.1.3 commit=087143285 compiled=2018-05-16T23:39:55+0800
+t=2018-05-21T11:43:39+0800 lvl=info msg="Config loaded from" logger=settings file="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本/conf/defaults.ini"
+t=2018-05-21T11:43:39+0800 lvl=info msg="Path Home" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本"
+t=2018-05-21T11:43:39+0800 lvl=info msg="Path Data" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data"
+t=2018-05-21T11:43:39+0800 lvl=info msg="Path Logs" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data\\log"
+t=2018-05-21T11:43:39+0800 lvl=info msg="Path Plugins" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data\\plugins"
+t=2018-05-21T11:43:39+0800 lvl=info msg="Path Provisioning" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\conf\\provisioning"
+t=2018-05-21T11:43:39+0800 lvl=info msg="App mode production" logger=settings
+t=2018-05-21T11:43:39+0800 lvl=info msg="Initializing DB" logger=sqlstore dbtype=sqlite3
+t=2018-05-21T11:43:39+0800 lvl=info msg="Starting DB migration" logger=migrator
+t=2018-05-21T11:43:39+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account to org"
+t=2018-05-21T11:43:39+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account to org"
+t=2018-05-21T11:43:39+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account_user to org_user"
+t=2018-05-21T11:43:39+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account_user to org_user"
+t=2018-05-21T11:43:39+0800 lvl=info msg="Starting plugin search" logger=plugins
+t=2018-05-21T11:43:39+0800 lvl=info msg="Initializing CleanUpService" logger=cleanup
+t=2018-05-21T11:43:39+0800 lvl=info msg="Initializing Alerting" logger=alerting.engine
+t=2018-05-21T11:43:39+0800 lvl=info msg="Initializing Stream Manager"
+t=2018-05-21T11:43:39+0800 lvl=info msg="Initializing HTTP Server" logger=http.server address=0.0.0.0:3000 protocol=http subUrl= socket=
+t=2018-05-21T11:43:40+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/dashboard/new status=404 remote_addr=[::1] time_ms=13 size=13178 referer=
+t=2018-05-21T12:03:00+0800 lvl=info msg="Starting Grafana" logger=server version=5.1.3 commit=087143285 compiled=2018-05-16T23:39:55+0800
+t=2018-05-21T12:03:00+0800 lvl=info msg="Config loaded from" logger=settings file="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本/conf/defaults.ini"
+t=2018-05-21T12:03:00+0800 lvl=info msg="Path Home" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本"
+t=2018-05-21T12:03:00+0800 lvl=info msg="Path Data" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data"
+t=2018-05-21T12:03:00+0800 lvl=info msg="Path Logs" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data\\log"
+t=2018-05-21T12:03:00+0800 lvl=info msg="Path Plugins" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data\\plugins"
+t=2018-05-21T12:03:00+0800 lvl=info msg="Path Provisioning" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\conf\\provisioning"
+t=2018-05-21T12:03:00+0800 lvl=info msg="App mode production" logger=settings
+t=2018-05-21T12:03:00+0800 lvl=info msg="Initializing DB" logger=sqlstore dbtype=sqlite3
+t=2018-05-21T12:03:00+0800 lvl=info msg="Starting DB migration" logger=migrator
+t=2018-05-21T12:03:00+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account to org"
+t=2018-05-21T12:03:00+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account to org"
+t=2018-05-21T12:03:00+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account_user to org_user"
+t=2018-05-21T12:03:00+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account_user to org_user"
+t=2018-05-21T12:03:00+0800 lvl=info msg="Starting plugin search" logger=plugins
+t=2018-05-21T12:03:00+0800 lvl=info msg="Initializing Alerting" logger=alerting.engine
+t=2018-05-21T12:03:00+0800 lvl=info msg="Initializing CleanUpService" logger=cleanup
+t=2018-05-21T12:03:00+0800 lvl=info msg="Initializing Stream Manager"
+t=2018-05-21T12:03:00+0800 lvl=info msg="Initializing HTTP Server" logger=http.server address=0.0.0.0:3000 protocol=http subUrl= socket=
+t=2018-05-21T12:03:06+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/dashboard/new status=404 remote_addr=[::1] time_ms=26 size=13178 referer=
+t=2018-05-21T12:03:06+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/manifest.929faf1a0b9b2e2040e3.js status=404 remote_addr=[::1] time_ms=13 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:06+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/vendor.0cea50118711e7e6c839.js status=404 remote_addr=[::1] time_ms=16 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:06+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=19 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:06+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/manifest.929faf1a0b9b2e2040e3.js status=404 remote_addr=[::1] time_ms=8 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:06+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/vendor.0cea50118711e7e6c839.js status=404 remote_addr=[::1] time_ms=8 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:06+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=8 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:18+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/dashboard/new status=404 remote_addr=[::1] time_ms=21 size=13178 referer=
+t=2018-05-21T12:03:18+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/manifest.929faf1a0b9b2e2040e3.js status=404 remote_addr=[::1] time_ms=12 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:18+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/vendor.0cea50118711e7e6c839.js status=404 remote_addr=[::1] time_ms=16 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:18+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=18 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:18+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/manifest.929faf1a0b9b2e2040e3.js status=404 remote_addr=[::1] time_ms=8 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:18+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/vendor.0cea50118711e7e6c839.js status=404 remote_addr=[::1] time_ms=7 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:18+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=8 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:20+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/dashboard/new status=404 remote_addr=[::1] time_ms=20 size=13178 referer=
+t=2018-05-21T12:03:20+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/manifest.929faf1a0b9b2e2040e3.js status=404 remote_addr=[::1] time_ms=12 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:20+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/vendor.0cea50118711e7e6c839.js status=404 remote_addr=[::1] time_ms=14 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:20+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=14 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:20+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/manifest.929faf1a0b9b2e2040e3.js status=404 remote_addr=[::1] time_ms=7 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:20+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/vendor.0cea50118711e7e6c839.js status=404 remote_addr=[::1] time_ms=7 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:20+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=8 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:26+0800 lvl=info msg="Starting Grafana" logger=server version=5.1.3 commit=087143285 compiled=2018-05-16T23:39:55+0800
+t=2018-05-21T12:03:26+0800 lvl=info msg="Config loaded from" logger=settings file="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本/conf/defaults.ini"
+t=2018-05-21T12:03:26+0800 lvl=info msg="Path Home" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本"
+t=2018-05-21T12:03:26+0800 lvl=info msg="Path Data" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data"
+t=2018-05-21T12:03:26+0800 lvl=info msg="Path Logs" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data\\log"
+t=2018-05-21T12:03:26+0800 lvl=info msg="Path Plugins" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data\\plugins"
+t=2018-05-21T12:03:26+0800 lvl=info msg="Path Provisioning" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\conf\\provisioning"
+t=2018-05-21T12:03:26+0800 lvl=info msg="App mode production" logger=settings
+t=2018-05-21T12:03:26+0800 lvl=info msg="Initializing DB" logger=sqlstore dbtype=sqlite3
+t=2018-05-21T12:03:26+0800 lvl=info msg="Starting DB migration" logger=migrator
+t=2018-05-21T12:03:26+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account to org"
+t=2018-05-21T12:03:26+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account to org"
+t=2018-05-21T12:03:26+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account_user to org_user"
+t=2018-05-21T12:03:26+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account_user to org_user"
+t=2018-05-21T12:03:26+0800 lvl=info msg="Starting plugin search" logger=plugins
+t=2018-05-21T12:03:26+0800 lvl=info msg="Initializing Alerting" logger=alerting.engine
+t=2018-05-21T12:03:26+0800 lvl=info msg="Initializing CleanUpService" logger=cleanup
+t=2018-05-21T12:03:26+0800 lvl=info msg="Initializing Stream Manager"
+t=2018-05-21T12:03:26+0800 lvl=info msg="Initializing HTTP Server" logger=http.server address=0.0.0.0:3000 protocol=http subUrl= socket=
+t=2018-05-21T12:03:27+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/dashboard/new status=404 remote_addr=[::1] time_ms=16 size=13178 referer=
+t=2018-05-21T12:03:27+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/vendor.0cea50118711e7e6c839.js status=404 remote_addr=[::1] time_ms=13 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:27+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=14 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:27+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/manifest.929faf1a0b9b2e2040e3.js status=404 remote_addr=[::1] time_ms=17 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:28+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/manifest.929faf1a0b9b2e2040e3.js status=404 remote_addr=[::1] time_ms=8 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:28+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/vendor.0cea50118711e7e6c839.js status=404 remote_addr=[::1] time_ms=10 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:28+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=7 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:29+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/dashboard/new status=404 remote_addr=[::1] time_ms=12 size=13178 referer=
+t=2018-05-21T12:03:29+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/manifest.929faf1a0b9b2e2040e3.js status=404 remote_addr=[::1] time_ms=13 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:29+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=16 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:29+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/vendor.0cea50118711e7e6c839.js status=404 remote_addr=[::1] time_ms=19 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:29+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/manifest.929faf1a0b9b2e2040e3.js status=404 remote_addr=[::1] time_ms=8 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:29+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/vendor.0cea50118711e7e6c839.js status=404 remote_addr=[::1] time_ms=8 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:29+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=8 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:30+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/dashboard/new status=404 remote_addr=[::1] time_ms=19 size=13178 referer=
+t=2018-05-21T12:03:30+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/manifest.929faf1a0b9b2e2040e3.js status=404 remote_addr=[::1] time_ms=15 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:30+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=17 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:30+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/vendor.0cea50118711e7e6c839.js status=404 remote_addr=[::1] time_ms=20 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:30+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/manifest.929faf1a0b9b2e2040e3.js status=404 remote_addr=[::1] time_ms=8 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:30+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/vendor.0cea50118711e7e6c839.js status=404 remote_addr=[::1] time_ms=9 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:30+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=7 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:30+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/dashboard/new status=404 remote_addr=[::1] time_ms=16 size=13178 referer=
+t=2018-05-21T12:03:30+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/vendor.0cea50118711e7e6c839.js status=404 remote_addr=[::1] time_ms=16 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:30+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=19 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:30+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/manifest.929faf1a0b9b2e2040e3.js status=404 remote_addr=[::1] time_ms=22 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:30+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/manifest.929faf1a0b9b2e2040e3.js status=404 remote_addr=[::1] time_ms=8 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:30+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/vendor.0cea50118711e7e6c839.js status=404 remote_addr=[::1] time_ms=12 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:03:30+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/build/app.5372b9bbcb8c6d1c027e.js status=404 remote_addr=[::1] time_ms=7 size=13178 referer="http://localhost:3000/dashboard/new?orgId=1"
+t=2018-05-21T12:05:30+0800 lvl=info msg="Starting Grafana" logger=server version=5.1.3 commit=087143285 compiled=2018-05-16T23:39:55+0800
+t=2018-05-21T12:05:30+0800 lvl=info msg="Config loaded from" logger=settings file="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本/conf/defaults.ini"
+t=2018-05-21T12:05:30+0800 lvl=info msg="Path Home" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本"
+t=2018-05-21T12:05:30+0800 lvl=info msg="Path Data" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data"
+t=2018-05-21T12:05:30+0800 lvl=info msg="Path Logs" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data\\log"
+t=2018-05-21T12:05:30+0800 lvl=info msg="Path Plugins" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data\\plugins"
+t=2018-05-21T12:05:30+0800 lvl=info msg="Path Provisioning" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\conf\\provisioning"
+t=2018-05-21T12:05:30+0800 lvl=info msg="App mode production" logger=settings
+t=2018-05-21T12:05:30+0800 lvl=info msg="Initializing DB" logger=sqlstore dbtype=sqlite3
+t=2018-05-21T12:05:30+0800 lvl=info msg="Starting DB migration" logger=migrator
+t=2018-05-21T12:05:30+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account to org"
+t=2018-05-21T12:05:30+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account to org"
+t=2018-05-21T12:05:30+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account_user to org_user"
+t=2018-05-21T12:05:30+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account_user to org_user"
+t=2018-05-21T12:05:30+0800 lvl=info msg="Starting plugin search" logger=plugins
+t=2018-05-21T12:05:30+0800 lvl=info msg="Initializing CleanUpService" logger=cleanup
+t=2018-05-21T12:05:30+0800 lvl=info msg="Initializing Alerting" logger=alerting.engine
+t=2018-05-21T12:05:30+0800 lvl=info msg="Initializing Stream Manager"
+t=2018-05-21T12:05:30+0800 lvl=info msg="Initializing HTTP Server" logger=http.server address=0.0.0.0:3000 protocol=http subUrl= socket=
+t=2018-05-21T12:05:32+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/dashboard/new status=404 remote_addr=[::1] time_ms=12 size=12680 referer=
+t=2018-05-21T13:39:30+0800 lvl=info msg="Starting Grafana" logger=server version=5.1.3 commit=087143285 compiled=2018-05-16T23:39:55+0800
+t=2018-05-21T13:39:30+0800 lvl=info msg="Config loaded from" logger=settings file="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本/conf/defaults.ini"
+t=2018-05-21T13:39:30+0800 lvl=info msg="Path Home" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本"
+t=2018-05-21T13:39:30+0800 lvl=info msg="Path Data" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data"
+t=2018-05-21T13:39:30+0800 lvl=info msg="Path Logs" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data\\log"
+t=2018-05-21T13:39:30+0800 lvl=info msg="Path Plugins" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\data\\plugins"
+t=2018-05-21T13:39:30+0800 lvl=info msg="Path Provisioning" logger=settings path="C:\\Users\\w9586\\Desktop\\grafana-5.1.3 - 副本\\conf\\provisioning"
+t=2018-05-21T13:39:30+0800 lvl=info msg="App mode production" logger=settings
+t=2018-05-21T13:39:30+0800 lvl=info msg="Initializing DB" logger=sqlstore dbtype=sqlite3
+t=2018-05-21T13:39:30+0800 lvl=info msg="Starting DB migration" logger=migrator
+t=2018-05-21T13:39:30+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account to org"
+t=2018-05-21T13:39:30+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account to org"
+t=2018-05-21T13:39:30+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account_user to org_user"
+t=2018-05-21T13:39:30+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account_user to org_user"
+t=2018-05-21T13:39:30+0800 lvl=info msg="Starting plugin search" logger=plugins
+t=2018-05-21T13:39:30+0800 lvl=info msg="Initializing Alerting" logger=alerting.engine
+t=2018-05-21T13:39:30+0800 lvl=info msg="Initializing CleanUpService" logger=cleanup
+t=2018-05-21T13:39:30+0800 lvl=info msg="Initializing Stream Manager"
+t=2018-05-21T13:39:30+0800 lvl=info msg="Initializing HTTP Server" logger=http.server address=0.0.0.0:3000 protocol=http subUrl= socket=
+t=2018-05-21T13:39:38+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/img/grafana_icon.svg status=404 remote_addr=[::1] time_ms=9 size=12680 referer=http://localhost:3000/
+t=2018-05-21T13:39:46+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/logout status=302 remote_addr=[::1] time_ms=5 size=29 referer="http://localhost:3000/?orgId=1"
+t=2018-05-21T13:39:46+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/public/img/grafana_icon.svg status=404 remote_addr=[::1] time_ms=6 size=9746 referer=http://localhost:3000/login
+t=2018-05-21T13:40:00+0800 lvl=info msg="Request Completed" logger=context userId=1 orgId=1 uname=admin method=GET path=/public/img/grafana_icon.svg status=404 remote_addr=[::1] time_ms=11 size=12680 referer=http://localhost:3000/
