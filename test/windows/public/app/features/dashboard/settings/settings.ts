@@ -187,16 +187,16 @@ export class SettingsCtrl {
 
     if (alerts > 0) {
       confirmText = 'DELETE';
-      text2 = `This dashboard contains ${alerts} alerts. Deleting this dashboard will also delete those alerts`;
+      text2 = `该仪表板包含${alerts} 警报。删除这个仪表板也会删除这些警报。`;
     }
 
     appEvents.emit('confirm-modal', {
       title: 'Delete',
-      text: 'Do you want to delete this dashboard?',
+      text: '你想删除这个仪表板吗？',
       text2: text2,
       icon: 'fa-trash',
       confirmText: confirmText,
-      yesText: 'Delete',
+      yesText: '删除',
       onConfirm: () => {
         this.dashboard.meta.canSave = false;
         this.deleteDashboardConfirmed();
@@ -206,7 +206,7 @@ export class SettingsCtrl {
 
   deleteDashboardConfirmed() {
     this.backendSrv.deleteDashboard(this.dashboard.uid).then(() => {
-      appEvents.emit('alert-success', ['Dashboard Deleted', this.dashboard.title + ' has been deleted']);
+      appEvents.emit('alert-success', ['仪表板已删除', this.dashboard.title + ' 已被删除']);
       this.$location.url('/');
     });
   }

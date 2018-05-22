@@ -2,7 +2,7 @@
 	<div class="modal-header">
 		<h2 class="modal-header-title">
 			<i class="fa fa-copy"></i>
-			<span class="p-l-1">Row Options</span>
+			<span class="p-l-1">行选项</span>
 		</h2>
 
 		<a class="modal-header-close" ng-click="ctrl.dismiss();">
@@ -13,17 +13,17 @@
 	<form name="ctrl.saveForm" ng-submit="ctrl.save()" class="modal-content text-center" novalidate>
 		<div class="section">
 			<div class="gf-form">
-				<span class="gf-form-label width-7">Title</span>
+				<span class="gf-form-label width-7">标题</span>
 				<input type="text" class="gf-form-input max-width-13" ng-model='ctrl.row.title'></input>
 			</div>
 			<div class="gf-form">
-				<span class="gf-form-label width-7">Repeat for</span>
+				<span class="gf-form-label width-7">重复</span>
 				<dash-repeat-option panel="ctrl.row"></dash-repeat-option>
 			</div>
 
 			<div class="gf-form-button-row">
-				<button type="submit" class="btn btn-success" ng-click="ctrl.update()">Update</button>
-				<button type="button" class="btn btn-inverse" ng-click="ctrl.dismiss()">Cancel</button>
+				<button type="submit" class="btn btn-success" ng-click="ctrl.update()">更新</button>
+				<button type="button" class="btn btn-inverse" ng-click="ctrl.dismiss()">取消</button>
 			</div>
 		</div>
 	</form>

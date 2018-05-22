@@ -1,7 +1,7 @@
 <div class="modal-body">
   <div class="modal-header">
     <h2 class="modal-header-title">
-      Export CSV
+      导出CSV
     </h2>
 
     <a class="modal-header-close" ng-click="ctrl.dismiss();">
@@ -12,14 +12,14 @@
   <div class="modal-content">
     <div class="p-t-2">
       <div class="gf-form" ng-hide="ctrl.panel === 'table'">
-        <label class="gf-form-label width-10">Mode</label>
+        <label class="gf-form-label width-10">模式</label>
         <div class="gf-form-select-wrapper">
           <select class="gf-form-input" ng-model="ctrl.asRows" ng-options="f.value as f.text for f in [{text: 'Series as rows', value: true}, {text: 'Series as columns', value: false}]">
           </select>
         </div>
       </div>
       <div class="gf-form" ng-hide="ctrl.panel === 'table'">
-        <label class="gf-form-label width-10">Date Time Format</label>
+        <label class="gf-form-label width-10">日期时间格式</label>
         <input type="text" class="gf-form-input" ng-model="ctrl.dateTimeFormat">
       </div>
       <gf-form-switch class="gf-form"
@@ -29,8 +29,8 @@
     </div>
 
     <div class="gf-form-button-row text-center">
-      <a class="btn btn-success" ng-click="ctrl.export();">Export</a>
-      <a class="btn-text" ng-click="ctrl.dismiss();">Cancel</a>
+      <a class="btn btn-success" ng-click="ctrl.export();">导出</a>
+      <a class="btn-text" ng-click="ctrl.dismiss();">取消</a>
     </div>
   </div>
 </div>

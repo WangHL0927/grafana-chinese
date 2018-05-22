@@ -8,11 +8,11 @@ export class PrefsControlCtrl {
   mode: string;
 
   timezones: any = [
-    { value: '', text: 'Default' },
-    { value: 'browser', text: 'Local browser time' },
+    { value: '', text: '默认' },
+    { value: 'browser', text: '本地浏览器时间' },
     { value: 'utc', text: 'UTC' },
   ];
-  themes: any = [{ value: '', text: 'Default' }, { value: 'dark', text: 'Dark' }, { value: 'light', text: 'Light' }];
+  themes: any = [{ value: '', text: '默认' }, { value: 'dark', text: 'Dark' }, { value: 'light', text: 'Light' }];
 
   /** @ngInject **/
   constructor(private backendSrv, private $location) {}
@@ -43,10 +43,10 @@ export class PrefsControlCtrl {
 
 var template = `
 <form name="ctrl.prefsForm" class="section gf-form-group">
-  <h3 class="page-heading">Preferences</h3>
+  <h3 class="page-heading">偏好设置</h3>
 
   <div class="gf-form">
-    <span class="gf-form-label width-11">UI Theme</span>
+    <span class="gf-form-label width-11">UI主题</span>
     <div class="gf-form-select-wrapper max-width-20">
       <select class="gf-form-input" ng-model="ctrl.prefs.theme" ng-options="f.value as f.text for f in ctrl.themes"></select>
     </div>
@@ -54,9 +54,9 @@ var template = `
 
   <div class="gf-form">
     <span class="gf-form-label width-11">
-      Home Dashboard
+      主页仪表板
       <info-popover mode="right-normal">
-        Not finding dashboard you want? Star it first, then it should appear in this select box.
+        没有找到你想要的仪表盘？ 首先收藏它，然后它会出现在这个选择框中。
       </info-popover>
     </span>
     <dashboard-selector class="gf-form-select-wrapper max-width-20" model="ctrl.prefs.homeDashboardId">
@@ -64,14 +64,14 @@ var template = `
   </div>
 
   <div class="gf-form">
-    <label class="gf-form-label width-11">Timezone</label>
+    <label class="gf-form-label width-11">时区</label>
     <div class="gf-form-select-wrapper max-width-20">
       <select class="gf-form-input" ng-model="ctrl.prefs.timezone" ng-options="f.value as f.text for f in ctrl.timezones"></select>
     </div>
   </div>
 
   <div class="gf-form-button-row">
-    <button type="submit" class="btn btn-success" ng-click="ctrl.updatePrefs()">Save</button>
+    <button type="submit" class="btn btn-success" ng-click="ctrl.updatePrefs()">保存</button>
   </div>
 </form>
 `;

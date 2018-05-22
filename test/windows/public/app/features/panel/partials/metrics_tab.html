@@ -90,7 +90,7 @@
 				<span class="gf-form-query-letter-cell-letter">{{ctrl.panelCtrl.nextRefId}}</span>
 			</label>
 			<button class="btn btn-secondary gf-form-btn" ng-click="ctrl.addQuery()" ng-hide="ctrl.datasourceInstance.meta.mixed">
-				Add Query
+        添加查询
 			</button>
 			<div class="dropdown" ng-if="ctrl.datasourceInstance.meta.mixed">
 				<gf-form-dropdown model="ctrl.addQueryDropdown" get-options="ctrl.getOptions(false)" on-change="ctrl.addMixedQuery($option)">

@@ -1,7 +1,7 @@
 <h3 class="dashboard-settings__header">
-  <a ng-click="ctrl.switchMode('list')">Versions</a>
+  <a ng-click="ctrl.switchMode('list')">版本</a>
   <span ng-show="ctrl.mode === 'compare'">
-    &gt; Comparing {{ctrl.baseInfo.version}}
+    &gt; 对比 {{ctrl.baseInfo.version}}
     <i class="fa fa-arrows-h"></i>
     {{ctrl.newInfo.version}}
     <cite class="muted" ng-if="ctrl.isNewLatest">(Latest)</cite>
@@ -11,7 +11,7 @@
 <div ng-if="ctrl.mode === 'list'">
   <div ng-if="ctrl.loading">
     <i class="fa fa-spinner fa-spin"></i>
-    <em>Fetching history list&hellip;</em>
+    <em>获取历史列表&hellip;</em>
   </div>
 
   <div ng-if="!ctrl.loading">
@@ -20,10 +20,10 @@
         <thead>
           <tr>
             <th class="width-4"></th>
-            <th class="width-4">Version</th>
-            <th class="width-14">Date</th>
-            <th class="width-10">Updated By</th>
-            <th>Notes</th>
+            <th class="width-4">版本</th>
+            <th class="width-14">日期</th>
+            <th class="width-10">更新者</th>
+            <th>记录</th>
             <th></th>
           </tr>
         </thead>
@@ -39,10 +39,10 @@
             <td>{{revision.message}}</td>
             <td class="text-right">
               <a class="btn btn-inverse btn-small" ng-show="revision.version !== ctrl.dashboard.version" ng-click="ctrl.restore(revision.version)">
-                <i class="fa fa-history"></i>&nbsp;&nbsp;Restore
+                <i class="fa fa-history"></i>&nbsp;&nbsp;恢复
               </a>
               <a class="btn btn-outline-disabled btn-small" ng-show="revision.version === ctrl.dashboard.version">
-                <i class="fa fa-check"></i>&nbsp;&nbsp;Latest
+                <i class="fa fa-check"></i>&nbsp;&nbsp;最新
               </a>
             </td>
           </tr>
@@ -51,7 +51,7 @@
 
       <div ng-if="ctrl.appending">
         <i class="fa fa-spinner fa-spin"></i>
-        <em>Fetching more entries&hellip;</em>
+        <em>获取更多条目&hellip;</em>
       </div>
 
       <div class="gf-form-group">
@@ -61,7 +61,7 @@
                    ng-if="ctrl.revisions.length >= ctrl.limit"
                    ng-click="ctrl.addToLog()"
                    ng-disabled="ctrl.isLastPage()">
-            Show more versions
+            显示更多版本
           </button>
           <button type="button"
                   class="btn btn-success"
@@ -69,7 +69,7 @@
                   ng-disabled="!ctrl.canCompare"
                   ng-click="ctrl.getDiff(ctrl.diff)"
                   bs-tooltip="ctrl.canCompare ? '' : 'Select 2 versions to start comparing'" data-placement="bottom">
-            <i class="fa fa-code-fork" ></i>&nbsp;&nbsp;Compare versions
+            <i class="fa fa-code-fork" ></i>&nbsp;&nbsp;对比版本
           </button>
         </div>
       </div>
@@ -80,7 +80,7 @@
 <div ng-if="ctrl.mode === 'compare'">
   <div ng-if="ctrl.loading">
     <i class="fa fa-spinner fa-spin"></i>
-    <em>Fetching changes&hellip;</em>
+    <em>正在获取更改&hellip;</em>
   </div>
 
   <div ng-if="!ctrl.loading">
@@ -88,7 +88,7 @@
              class="btn btn-danger pull-right"
              ng-click="ctrl.restore(ctrl.baseInfo.version)"
              ng-if="ctrl.isNewLatest">
-      <i class="fa fa-history" ></i>&nbsp;&nbsp;Restore to version {{ctrl.baseInfo.version}}
+      <i class="fa fa-history" ></i>&nbsp;&nbsp;恢复到版本 {{ctrl.baseInfo.version}}
     </button>
     <section>
       <p class="small muted">
@@ -110,7 +110,7 @@
     </div>
 
     <div class="gf-form-button-row">
-      <button class="btn btn-secondary" ng-click="ctrl.getDiff('json')">View JSON Diff</button>
+      <button class="btn btn-secondary" ng-click="ctrl.getDiff('json')">查看JSON差异</button>
     </div>
 
     <div class="delta-html" ng-show="ctrl.diff === 'json'" compile="ctrl.delta.json"></div>

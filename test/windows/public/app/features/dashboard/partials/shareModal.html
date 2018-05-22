@@ -32,8 +32,7 @@
 		</div>
 		<div class="share-modal-content">
 			<p class="share-modal-info-text">
-				The html code below can be pasted and included in another web page. Unless anonymous access
-				is enabled the user viewing that page need to be signed into grafana for the graph to load.
+        下面的html代码可以粘贴并包含在另一个网页中。 除非启用匿名访问，否则查看该页面的用户需要登录grafana才能加载图表。
 			</p>
 
 			<div ng-include src="'shareLinkOptions.html'"></div>
@@ -62,7 +61,7 @@
 			checked="options.includeTemplateVars" on-change="buildUrl()">
 		</gf-form-switch>
 		<div class="gf-form">
-			<span class="gf-form-label width-12">Theme</span>
+			<span class="gf-form-label width-12">主题</span>
 			<div class="gf-form-select-wrapper width-10">
 				<select class="gf-form-input" ng-model="options.theme" ng-options="f as f for f in ['current', 'dark', 'light']" ng-change="buildUrl()"></select>
 			</div>
@@ -77,7 +76,7 @@
 		</div>
 		<div class="share-modal-content">
 			<p class="share-modal-info-text">
-				Create a direct link to this dashboard or panel, customized with the options below.
+        创建一个直接链接到此仪表板或面板，使用下面的选项进行自定义。
 			</p>
 			<div ng-include src="'shareLinkOptions.html'"></div>
 			<div>
@@ -87,13 +86,13 @@
 							<input type="text" data-share-panel-url class="gf-form-input" ng-model="shareUrl"></input>
 						</div>
 						<div class="gf-form">
-							<button class="btn btn-inverse" clipboard-button="getShareUrl()"><i class="fa fa-clipboard"></i> Copy</button>
+							<button class="btn btn-inverse" clipboard-button="getShareUrl()"><i class="fa fa-clipboard"></i> 复制</button>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="gf-form" ng-show="modeSharePanel">
-				<a href="{{imageUrl}}" target="_blank"><i class="fa fa-camera"></i> Direct link rendered image</a>
+				<a href="{{imageUrl}}" target="_blank"><i class="fa fa-camera"></i> 直接链接呈现图像</a>
 			</div>
 		</div>
 </script>
@@ -108,30 +107,27 @@
       <div class="share-modal-content">
         <div ng-if="step === 1">
           <p class="share-modal-info-text">
-            A snapshot is an instant way to share an interactive dashboard publicly.
-            When created, we <strong>strip sensitive data</strong> like queries (metric, template and annotation) and panel links,
-            leaving only the visible metric data and series names embedded into your dashboard.
+            快照是公开共享交互式仪表板的一种方式。 创建后，我们会<strong>去除敏感数据</strong>，例如查询（指标，模板和注释）和面板链接，只将可见的指标数据和系列名称嵌入您的仪表板。
           </p>
           <p class="share-modal-info-text">
-            Keep in mind, your <strong>snapshot can be viewed by anyone</strong> that has the link and can reach the URL.
-            Share wisely.
+            请注意，您的<strong>快照可供任何拥有该链接并可以访问该网址的人查看</strong>。
+            请谨慎分享。
           </p>
         </div>
 
 				<div class="share-modal-header" ng-if="step === 3">
 					<p class="share-modal-info-text">
-						The snapshot has now been deleted. If it you have already accessed it once, It might take up to an hour before it is removed from
-						browser caches or CDN caches.
+            快照现在已被删除。 如果它已经访问过一次，它可能需要长达一个小时才从浏览器缓存或CDN缓存中删除。
 					</p>
 				</div>
 
 				<div class="gf-form-group share-modal-options">
 					<div class="gf-form" ng-if="step === 1">
-						<span class="gf-form-label width-12">Snapshot name</span>
+						<span class="gf-form-label width-12">快照名称</span>
 						<input type="text" ng-model="snapshot.name" class="gf-form-input max-width-15" >
 					</div>
 					<div class="gf-form" ng-if="step === 1">
-						<span class="gf-form-label width-12">Expire</span>
+						<span class="gf-form-label width-12">到期</span>
 						<div class="gf-form-select-wrapper max-width-15">
 							<select class="gf-form-input" ng-model="snapshot.expires" ng-options="f.value as f.text for f in expireOptions"></select>
 						</div>
@@ -144,20 +140,20 @@
 								{{snapshotUrl}}
 							</a>
 							<br>
-							<button class="btn btn-inverse" clipboard-button="getSnapshotUrl()"><i class="fa fa-clipboard"></i> Copy Link</button>
+							<button class="btn btn-inverse" clipboard-button="getSnapshotUrl()"><i class="fa fa-clipboard"></i> 复制链接</button>
 						</div>
 					</div>
 				</div>
 
 				<div ng-if="step === 1">
 					<p class="share-modal-info-text">
-						You may need to configure the timeout value if it takes a long time to collect your dashboard's metrics.
+            如果收集仪表板指标需要很长时间，则可能需要配置超时值。
 					</p>
 				</div>
 
 				<div class="gf-form-group share-modal-options">
 					<div class="gf-form" ng-if="step === 1">
-						<span class="gf-form-label width-12">Timeout (seconds)</span>
+						<span class="gf-form-label width-12">超时（秒）</span>
 						<input type="number" ng-model="snapshot.timeoutSeconds" class="gf-form-input max-width-15" >
 					</div>
 				</div>
@@ -165,17 +161,17 @@
 				<div ng-if="step === 1" class="gf-form-button-row">
 					<button class="btn gf-form-btn width-10 btn-success" ng-click="createSnapshot()" ng-disabled="loading">
 						<i class="fa fa-save"></i>
-						Local Snapshot
+            本地快照
 					</button>
 					<button class="btn gf-form-btn width-16 btn-secondary" ng-if="externalEnabled" ng-click="createSnapshot(true)" ng-disabled="loading">
 						<i class="fa fa-cloud-upload"></i>
 						{{sharingButtonText}}
 					</button>
-					<a class="btn btn-link" ng-click="dismiss()">Cancel</a>
+					<a class="btn btn-link" ng-click="dismiss()">取消</a>
 				</div>
 
 				<div class="pull-right" ng-if="step === 2" style="padding: 5px">
-					Did you make a mistake? <a class="pointer" ng-click="deleteSnapshot()" target="_blank">delete snapshot.</a>
+          你犯了一个错误？ <a class="pointer" ng-click="deleteSnapshot()" target="_blank">删除快照。</a>
 				</div>
 			</div>
 		</div>

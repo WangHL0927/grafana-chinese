@@ -2,12 +2,12 @@
 
 <div class="page-container page-body" ng-cloak>
 
-	<h3 class="page-sub-heading">New Dashboard Folder</h3>
+	<h3 class="page-sub-heading">新建仪表板文件夹</h3>
 
   <form name="ctrl.saveForm" ng-submit="ctrl.create()" novalidate>
 		<div class="gf-form-inline">
 			<div class="gf-form gf-form--grow">
-				<label class="gf-form-label width-10">Name</label>
+				<label class="gf-form-label width-10">名称</label>
 				<input type="text" class="gf-form-input" ng-model="ctrl.title" give-focus="true" ng-change="ctrl.titleChanged()" ng-model-options="{ debounce: 400 }" ng-class="{'validation-error': ctrl.nameExists || !ctrl.dash.title}">
 				<label class="gf-form-label text-success" ng-if="ctrl.titleTouched && !ctrl.hasValidationError">
 					<i class="fa fa-check"></i>
@@ -26,7 +26,7 @@
 
 		<div class="gf-form-button-row">
 			<button type="submit" class="btn btn-success width-12" ng-disabled="!ctrl.titleTouched || ctrl.hasValidationError">
-				<i class="fa fa-save"></i> Create
+				<i class="fa fa-save"></i> 创建
 			</button>
 		</div>
 	</form>

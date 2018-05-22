@@ -41,8 +41,8 @@ export class TeamsCtrl {
 
   deleteTeam(team) {
     appEvents.emit('confirm-modal', {
-      title: 'Delete',
-      text: 'Are you sure you want to delete Team ' + team.name + '?',
+      title: '删除',
+      text: '你确定要删除团队 ' + team.name + '？',
       yesText: 'Delete',
       icon: 'fa-warning',
       onConfirm: () => {

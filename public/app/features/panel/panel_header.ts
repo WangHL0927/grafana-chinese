@@ -10,19 +10,19 @@ var template = `
     <ul class="dropdown-menu dropdown-menu--menu panel-menu" role="menu">
       <li>
         <a ng-click="ctrl.addDataQuery(datasource);">
-          <i class="fa fa-cog"></i> Edit <span class="dropdown-menu-item-shortcut">e</span>
+          <i class="fa fa-cog"></i> 编辑 <span class="dropdown-menu-item-shortcut">e</span>
         </a>
       </li>
       <li class="dropdown-submenu">
-        <a ng-click="ctrl.addDataQuery(datasource);"><i class="fa fa-cube"></i> Actions</a>
+        <a ng-click="ctrl.addDataQuery(datasource);"><i class="fa fa-cube"></i> 操作</a>
         <ul class="dropdown-menu panel-menu">
-          <li><a ng-click="ctrl.addDataQuery(datasource);"><i class="fa fa-flash"></i> Add Annotation</a></li>
-          <li><a ng-click="ctrl.addDataQuery(datasource);"><i class="fa fa-bullseye"></i> Toggle Legend</a></li>
-          <li><a ng-click="ctrl.addDataQuery(datasource);"><i class="fa fa-download"></i> Export to CSV</a></li>
-          <li><a ng-click="ctrl.addDataQuery(datasource);"><i class="fa fa-eye"></i> View JSON</a></li>
+          <li><a ng-click="ctrl.addDataQuery(datasource);"><i class="fa fa-flash"></i> 添加注释</a></li>
+          <li><a ng-click="ctrl.addDataQuery(datasource);"><i class="fa fa-bullseye"></i> 切换图例</a></li>
+          <li><a ng-click="ctrl.addDataQuery(datasource);"><i class="fa fa-download"></i> 导出为CSV</a></li>
+          <li><a ng-click="ctrl.addDataQuery(datasource);"><i class="fa fa-eye"></i> 查看JSON</a></li>
         </ul>
       </li>
-      <li><a ng-click="ctrl.addDataQuery(datasource);"><i class="fa fa-trash"></i> Remove</a></li>
+      <li><a ng-click="ctrl.addDataQuery(datasource);"><i class="fa fa-trash"></i> 移除</a></li>
     </ul>
   </span>
   <span class="panel-time-info" ng-show="ctrl.timeInfo"><i class="fa fa-clock-o"></i> {{ctrl.timeInfo}}</span>

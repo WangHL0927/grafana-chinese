@@ -20,15 +20,15 @@ export class VariableEditorCtrl {
 
     $scope.sortOptions = [
       { value: 0, text: 'Disabled' },
-      { value: 1, text: 'Alphabetical (asc)' },
-      { value: 2, text: 'Alphabetical (desc)' },
-      { value: 3, text: 'Numerical (asc)' },
-      { value: 4, text: 'Numerical (desc)' },
-      { value: 5, text: 'Alphabetical (case-insensitive, asc)' },
-      { value: 6, text: 'Alphabetical (case-insensitive, desc)' },
+      { value: 1, text: '按字母顺序排列（升序）' },
+      { value: 2, text: '按字母顺序排列（降序）' },
+      { value: 3, text: '按数值排列（升序）' },
+      { value: 4, text: '按数值排列（降序）' },
+      { value: 5, text: '按字母顺序排列（不区分大小写，升序）' },
+      { value: 6, text: '按字母顺序排列（不区分大小写，降序）' },
     ];
 
-    $scope.hideOptions = [{ value: 0, text: '' }, { value: 1, text: 'Label' }, { value: 2, text: 'Variable' }];
+    $scope.hideOptions = [{ value: 0, text: '' }, { value: 1, text: '标签' }, { value: 2, text: '变量' }];
 
     $scope.init = function() {
       $scope.mode = 'list';

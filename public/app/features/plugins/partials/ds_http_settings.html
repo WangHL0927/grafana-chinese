@@ -147,11 +147,11 @@
 <div class="gf-form-group" ng-if="current.access=='proxy'">
   <div class="gf-form-inline">
     <div class="gf-form">
-      <span class="gf-form-label width-10">Whitelisted Cookies</span>
+      <span class="gf-form-label width-10">白名单 Cookies</span>
       <bootstrap-tagsinput ng-model="current.jsonData.keepCookies" tagclass="label label-tag" placeholder="Add Name">
       </bootstrap-tagsinput>
       <info-popover mode="right-absolute">
-        Grafana Proxy deletes forwarded cookies by default. Specify cookies by name that should be forwarded to the data source.
+        Grafana代理默认删除转发的cookie。 按名称指定应该转发给数据源的Cookie。
       </info-popover>
     </div>
   </div>

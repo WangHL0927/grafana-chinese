@@ -38,7 +38,7 @@ class DashboardPermissions extends Component<IProps, any> {
       <div>
         <div className="dashboard-settings__header">
           <div className="page-action-bar">
-            <h3 className="d-inline-block">Permissions</h3>
+            <h3 className="d-inline-block">权限</h3>
             <Tooltip className="page-sub-heading-icon" placement="auto" content={PermissionsInfo}>
               <i className="gicon gicon-question gicon--has-hover" />
             </Tooltip>
@@ -48,7 +48,7 @@ class DashboardPermissions extends Component<IProps, any> {
               onClick={this.handleAddPermission}
               disabled={this.permissions.isAddPermissionsVisible}
             >
-              <i className="fa fa-plus" /> Add Permission
+              <i className="fa fa-plus" /> 添加权限
             </button>
           </div>
         </div>

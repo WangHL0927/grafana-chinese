@@ -29,9 +29,9 @@ export class DashboardSrv {
 
       this.$rootScope.appEvent('confirm-modal', {
         title: 'Conflict',
-        text: 'Someone else has updated this dashboard.',
-        text2: 'Would you still like to save this dashboard?',
-        yesText: 'Save & Overwrite',
+        text: '其他人已更新此仪表板。',
+        text2: '你还想保存这个仪表板吗？',
+        yesText: '保存并覆盖',
         icon: 'fa-warning',
         onConfirm: () => {
           this.save(clone, options);
@@ -44,9 +44,9 @@ export class DashboardSrv {
 
       this.$rootScope.appEvent('confirm-modal', {
         title: 'Conflict',
-        text: 'A dashboard with the same name in selected folder already exists.',
-        text2: 'Would you still like to save this dashboard?',
-        yesText: 'Save & Overwrite',
+        text: '所选文件夹中已存在相同名称的仪表板。',
+        text2: '你还要保存这个仪表板吗？',
+        yesText: '保存并覆盖',
         icon: 'fa-warning',
         onConfirm: () => {
           this.save(clone, options);
@@ -60,10 +60,10 @@ export class DashboardSrv {
       this.$rootScope.appEvent('confirm-modal', {
         title: 'Plugin Dashboard',
         text: err.data.message,
-        text2: 'Your changes will be lost when you update the plugin. Use Save As to create custom version.',
-        yesText: 'Overwrite',
+        text2: '更新插件后，您的更改将会丢失。 使用另存为来创建自定义版本。',
+        yesText: '覆盖',
         icon: 'fa-warning',
-        altActionText: 'Save As',
+        altActionText: '另存为',
         onAltAction: () => {
           this.showSaveAsModal();
         },

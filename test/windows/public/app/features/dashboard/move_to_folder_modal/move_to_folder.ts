@@ -26,7 +26,7 @@ export class MoveToFolderCtrl {
       }
 
       if (result.totalCount === result.alreadyInFolderCount) {
-        appEvents.emit('alert-error', ['Error', `Dashboards already belongs to folder ${this.folder.title}`]);
+        appEvents.emit('alert-error', ['Error', `仪表板已经属于文件夹 ${this.folder.title}`]);
       }
 
       this.dismiss();

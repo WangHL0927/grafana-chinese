@@ -7,7 +7,7 @@ export class ChangePasswordCtrl {
     $scope.command = {};
     $scope.authProxyEnabled = config.authProxyEnabled;
     $scope.ldapEnabled = config.ldapEnabled;
-    $scope.navModel = navModelSrv.getNav('profile', 'change-password', 0);
+    $scope.navModel = navModelSrv.getNav('profile', '更改密码', 0);
 
     $scope.changePassword = function() {
       if (!$scope.userForm.$valid) {
@@ -15,7 +15,7 @@ export class ChangePasswordCtrl {
       }
 
       if ($scope.command.newPassword !== $scope.command.confirmNew) {
-        $scope.appEvent('alert-warning', ['New passwords do not match', '']);
+        $scope.appEvent('alert-warning', ['新密码不匹配', '']);
         return;
       }
 

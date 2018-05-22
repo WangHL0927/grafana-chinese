@@ -2,7 +2,7 @@
   <div class="modal-header">
     <h2 class="modal-header-title">
 			<i class="gicon gicon-folder-new"></i>
-      <span class="p-l-1">Choose Dashboard Folder</span>
+      <span class="p-l-1">选择仪表板文件夹</span>
     </h2>
 
     <a class="modal-header-close" ng-click="ctrl.dismiss();">
@@ -11,7 +11,7 @@
   </div>
 
   <form name="ctrl.saveForm" ng-submit="ctrl.save()" class="modal-content folder-modal" novalidate>
-    <p>Move the {{ctrl.dashboards.length}} selected dashboards to the following folder:</p>
+    <p>将选定的仪表板 {{ctrl.dashboards.length}} 移至以下文件夹：</p>
 
     <div class="p-t-2">
       <div class="gf-form">
@@ -26,8 +26,8 @@
       </div>
     </div>
     <div class="gf-form-button-row text-center">
-      <button type="submit" class="btn btn-success" ng-disabled="ctrl.saveForm.$invalid || !ctrl.isValidFolderSelection">Move</button>
-      <a class="btn-text" ng-click="ctrl.dismiss();">Cancel</a>
+      <button type="submit" class="btn btn-success" ng-disabled="ctrl.saveForm.$invalid || !ctrl.isValidFolderSelection">移动</button>
+      <a class="btn-text" ng-click="ctrl.dismiss();">取消</a>
     </div>
   </form>
 </div>
