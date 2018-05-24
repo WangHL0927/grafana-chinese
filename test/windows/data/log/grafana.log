@@ -307,3 +307,24 @@ t=2018-05-23T14:23:14+0800 lvl=info msg="Initializing Stream Manager"
 t=2018-05-23T14:23:14+0800 lvl=info msg="Initializing HTTP Server" logger=http.server address=0.0.0.0:3000 protocol=http subUrl= socket=
 t=2018-05-23T14:23:22+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/ status=302 remote_addr=[::1] time_ms=84 size=29 referer=
 t=2018-05-23T14:23:22+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/login status=302 remote_addr=[::1] time_ms=73 size=24 referer=
+t=2018-05-23T22:09:33+0800 lvl=info msg="Starting Grafana" logger=server version=5.1.3 commit=087143285 compiled=2018-05-16T23:39:55+0800
+t=2018-05-23T22:09:33+0800 lvl=info msg="Config loaded from" logger=settings file=E:\\learning\\grafana-chinese\\test\\windows/conf/defaults.ini
+t=2018-05-23T22:09:33+0800 lvl=info msg="Path Home" logger=settings path=E:\\learning\\grafana-chinese\\test\\windows
+t=2018-05-23T22:09:33+0800 lvl=info msg="Path Data" logger=settings path=E:\\learning\\grafana-chinese\\test\\windows\\data
+t=2018-05-23T22:09:33+0800 lvl=info msg="Path Logs" logger=settings path=E:\\learning\\grafana-chinese\\test\\windows\\data\\log
+t=2018-05-23T22:09:33+0800 lvl=info msg="Path Plugins" logger=settings path=E:\\learning\\grafana-chinese\\test\\windows\\data\\plugins
+t=2018-05-23T22:09:33+0800 lvl=info msg="Path Provisioning" logger=settings path=E:\\learning\\grafana-chinese\\test\\windows\\conf\\provisioning
+t=2018-05-23T22:09:33+0800 lvl=info msg="App mode production" logger=settings
+t=2018-05-23T22:09:33+0800 lvl=info msg="Initializing DB" logger=sqlstore dbtype=sqlite3
+t=2018-05-23T22:09:33+0800 lvl=info msg="Starting DB migration" logger=migrator
+t=2018-05-23T22:09:33+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account to org"
+t=2018-05-23T22:09:33+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account to org"
+t=2018-05-23T22:09:33+0800 lvl=info msg="Executing migration" logger=migrator id="copy data account_user to org_user"
+t=2018-05-23T22:09:33+0800 lvl=info msg="Skipping migration condition not fulfilled" logger=migrator id="copy data account_user to org_user"
+t=2018-05-23T22:09:33+0800 lvl=info msg="Starting plugin search" logger=plugins
+t=2018-05-23T22:09:34+0800 lvl=info msg="Initializing CleanUpService" logger=cleanup
+t=2018-05-23T22:09:34+0800 lvl=info msg="Initializing Alerting" logger=alerting.engine
+t=2018-05-23T22:09:34+0800 lvl=info msg="Initializing Stream Manager"
+t=2018-05-23T22:09:34+0800 lvl=info msg="Initializing HTTP Server" logger=http.server address=0.0.0.0:3000 protocol=http subUrl= socket=
+t=2018-05-23T22:09:38+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/ status=302 remote_addr=[::1] time_ms=10 size=29 referer=
+t=2018-05-23T22:09:38+0800 lvl=info msg="Request Completed" logger=context userId=0 orgId=0 uname= method=GET path=/login status=302 remote_addr=[::1] time_ms=24 size=24 referer=
