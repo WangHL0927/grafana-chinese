@@ -21,7 +21,7 @@ email：w958660278@163.com
 
 ## 使用教程
 
-复制`public`目录到grafana安装目录替换（替换！不可覆盖文件，建议将原目录重命名备份），替换完成后重启grafana即可。
+复制`public`目录到grafana安装目录替换(一般在`/usr/share/grafana`，建议先备份原有文件)，替换完成后重启grafana即可。
 
 
 ## 测试教程
