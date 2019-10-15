@@ -16,12 +16,14 @@ console() {
 main() {
   console br
   console info 'Start grafana-dev-server...'
+  console action 'run container grafana-dev-server'
   docker run \
     -d \
-    -p 3333:3000 \
+    -p 3000:3000 \
     --name grafana-dev-server \
+    -v `pwd`/grafana/public:/usr/share/grafana/public \
     grafana/grafana:6.4.2
-#  docker exec -it grafana-dev-server bash
+  console success 'grafana-dev-server run at http://localhost:3000'
 }
 
 main

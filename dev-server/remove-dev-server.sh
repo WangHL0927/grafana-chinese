@@ -21,7 +21,6 @@ main() {
 
   console action 'Remove dev-server...'
   docker rm grafana-dev-server
-
   console success 'Remove complete!'
 }
 
