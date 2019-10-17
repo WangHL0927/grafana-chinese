@@ -22,7 +22,7 @@ main() {
     -p 3000:3000 \
     --name grafana-dev-server \
     -v `pwd`/grafana/public:/usr/share/grafana/public \
-    grafana/grafana:6.4.2
+    grafana/grafana:6.4.3
 #        -v `pwd`/dev-server/conf/defaults.ini:/usr/share/grafana/conf/defaults.ini \
   console success 'grafana-dev-server runing at http://localhost:3000'
 }

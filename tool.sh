@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-grafana_version='6.4.2'
+grafana_version='6.4.3'
 docker_user='w958660278'
 
 console() {
