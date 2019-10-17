@@ -12,6 +12,18 @@ console() {
   esac
 }
 
+initDevProject() {
+  console br
+  console info 'Init-tool'
+  console br
+  console action 'Clone source from https://github.com/WangHL0927/grafana.git'
+  git clone https://github.com/WangHL0927/grafana.git
+  cd ./grafana
+  console action 'Run yarn install...'
+  yarn install
+  console success 'Init dev success!'
+}
+
 releaseDockerDev() {
   console br
   console info "Release Latest version and push to DockerHub"
@@ -20,9 +32,8 @@ releaseDockerDev() {
   tag="grafana-cn:$version-dev"
   console action "Build and push $version-dev..."
   docker build -t $tag .
-  docker push $tag 
+  docker push $tag
   console success 'Release success!'
-
 }
 
 releaseDocker() {
@@ -41,15 +52,16 @@ releaseDocker() {
   console success 'Release success!'
 }
 
-
 printMenu() {
   console br
   console info Tool Script
   console br
   console info "1. Start dev-server."
+  console info "1. Start dev-server."
   console info "2. Stop/Remove dev-server."
   console info "3. Release to DockerHub with dev tag."
   console info "4. Release latest to DockerHub."
+  console info "5. Init dev project."
   console br
   console danger "Input number and press ENTER:"
 }
@@ -63,6 +75,7 @@ main() {
   "2") ./dev-server/remove-dev-server.sh ;;
   "3") releaseDockerDev ;;
   "4") releaseDocker ;;
+  "5") initDevProject ;;
   *)
     console error "ERROR: undefined function!"
     exit
