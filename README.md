@@ -12,18 +12,30 @@
 当前Grafana版本：v6.4.3<br />当前版本汉化进度：0% 😅
 
 
+<a name="GgDhn"></a>
+## 构建方式
+
+```bash
+./tool.sh
+# 输入 5 回车进行初始化
+# 初始化完成后继续。。。
+
+cd grafana
+npm run build
+```
+
 <a name="F9gVh"></a>
 ## 使用方式
 
 <a name="GzPJx"></a>
-### 2.1 Docker
+### 3.1 Docker
 本镜像基于官方镜像构建，仅替换前端资源，具体请参考官方文档用法。<br />Demo：
 ```bash
 docker run -d -p 3000:3000 --name=grafana-cn w958660278/grafana-cn:latest
 ```
 
 <a name="0lnVn"></a>
-### 2.2 资源替换
+### 3.2 资源替换
 直接将grafana/public文件夹替换线上生产版本。
 
 Linux路径：`/usr/share/grafana/public`<br />Windows路径：`/public`
