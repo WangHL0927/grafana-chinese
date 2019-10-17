@@ -54,13 +54,12 @@ releaseDocker() {
 
 printMenu() {
   console br
-  console info Tool Script
+  console info "Tool Script"
   console br
-  console info "1. Start dev-server."
   console info "1. Start dev-server."
   console info "2. Stop/Remove dev-server."
   console info "3. Release to DockerHub with dev tag."
-  console info "4. Release latest to DockerHub."
+  console info "4. Release to DockerHub with latest tag."
   console info "5. Init dev project."
   console br
   console danger "Input number and press ENTER:"
