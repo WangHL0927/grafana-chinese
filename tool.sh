@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+grafana_version='6.4.2'
+docker_user='w958660278'
+
 console() {
   content=$2
   case $1 in
@@ -26,24 +29,32 @@ initDevProject() {
 
 releaseDockerDev() {
   console br
-  console info "Release Latest version and push to DockerHub"
-  console danger "Input version and press ENTER:"
+  console info "Release Dev version and push to DockerHub"
+  console danger "The full tag name like grafana-cn:$grafana_version.0001-dev"
+  console danger "Input build version and press ENTER:[eg. 0002]"
   read version
-  tag="grafana-cn:$version-dev"
-  console action "Build and push $version-dev..."
+  tag="$docker_user/grafana-cn:$grafana_version.$version-dev"
+  console action "Build and push $grafana_version.$version-dev..."
+  rm -rf ./grafana/public/build/*.js.map
   docker build -t $tag .
   docker push $tag
+  tag2="$docker_user/grafana-cn:latest-dev"
+  console action "Build and push latest-dev..."
+  docker build -t $tag2 .
+  docker push $tag2
   console success 'Release success!'
 }
 
 releaseDocker() {
   console br
   console info "Release Latest version and push to DockerHub"
-  console danger "Input version and press ENTER:"
+  console danger "The full tag name like grafana-cn:$grafana_version.0001"
+  console danger "Input build version and press ENTER:[eg. 0002]"
   read version
-  tag="grafana-cn:$version"
-  tag2="grafana-cn:latest"
-  console action "Build and push $version..."
+  tag="$docker_user/grafana-cn:$grafana_version.$version"
+  tag2="$docker_user/grafana-cn:latest"
+  console action "Build and push $grafana_version.$version..."
+  rm -rf ./grafana/public/build/*.js.map
   docker build -t $tag .
   docker push $tag
   console action "Build and push latest..."
@@ -77,8 +88,7 @@ main() {
   "5") initDevProject ;;
   *)
     console error "ERROR: undefined function!"
-    exit
-    ;;
+    exit;;
   esac
 }
 
