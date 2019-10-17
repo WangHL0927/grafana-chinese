@@ -1,15 +1,49 @@
 # grafana-chinese
 
----
+<a name="NPS5Q"></a>
+## 简介
+自己做的中文版，粗糙且枯燥。<br />邮箱：w958660278@163.com<br />Q群：921235002
 
-## 2019-10-10
-6.x 新版本正在更新中，重新规划汉化流程。
+![image.png](https://cdn.nlark.com/yuque/0/2019/png/225645/1571331709247-18e8dfac-6398-4ede-a220-c7db9392638e.png#align=left&display=inline&height=411&name=image.png&originHeight=411&originWidth=300&search=&size=110904&status=done&width=300)
 
-旧版本请前往 https://github.com/WangHL0927/grafana-chinese-old
+<a name="kZYxw"></a>
+## 版本进度
 
-
-
-相关建议欢迎留言：<br />Github: [https://github.com/pi2star/grafana-chinese.git](https://github.com/pi2star/grafana-chinese.git)<br />Email: w958660278@163.com<br />QQ群: 921235002
+当前Grafana版本：v6.4.3<br />当前版本汉化进度：0% 😅
 
 
-![image.png](https://cdn.nlark.com/yuque/0/2019/png/225645/1571157824464-2db78acf-27fb-4bbf-ac76-2cc2f35361fb.png#align=left&display=inline&height=338&name=image.png&originHeight=741&originWidth=541&search=&size=223250&status=done&width=247)
+<a name="F9gVh"></a>
+## 使用方式
+
+<a name="GzPJx"></a>
+### 2.1 Docker
+本镜像基于官方镜像构建，仅替换前端资源，具体请参考官方文档用法。<br />Demo：
+```bash
+docker run -d -p 3000:3000 --name=grafana-cn w958660278/grafana-cn:latest
+```
+
+<a name="0lnVn"></a>
+### 2.2 资源替换
+直接将grafana/public文件夹替换线上生产版本。
+
+Linux路径：`/usr/share/grafana/public`<br />Windows路径：`/public`
+
+**注意事项：**
+
+- 备份！备份！备份！
+- 注意版本号一致，不可混用。
+- 建议整个文件夹替换，不要骚操作。
+
+<a name="0pk76"></a>
+## 汉化教程
+
+传送门：[https://wanghualong.cn/archives/44/](https://wanghualong.cn/archives/44/)
+
+<a name="wcU8O"></a>
+## 参与汉化
+请移步至源码项目提交PR。<br />传送门：[https://github.com/WangHL0927/grafana](https://github.com/WangHL0927/grafana)
+
+<a name="HQzi5"></a>
+## 考古
+
+历史版本请前往旧仓库 [https://github.com/WangHL0927/grafana-chinese-old](https://github.com/WangHL0927/grafana-chinese-old)
