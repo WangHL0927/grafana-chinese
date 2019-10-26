@@ -9,8 +9,73 @@
 <a name="kZYxw"></a>
 ## 版本进度
 
-当前Grafana版本：v6.4.3<br />当前版本汉化进度：0% 😅
+当前Grafana版本：v6.4.3 (commit: 3a2bfb7)
 
+<details><br /><summary>当前版本进度概览</summary>
+
+- [ ] app/
+- [x] core/
+- [ ] features/
+- [x] admin/
+- [ ] alerting/
+- [ ] annotations/
+- [ ] api-keys/
+- [ ] dashboard/
+- [ ] datasources/
+- [ ] explore/
+- [ ] folders/
+- [ ] manage-dashboards/
+- [ ] org/
+- [ ] panel/
+- [ ] playlist/
+- [ ] plugins/
+- [ ] profile/
+- [ ] teams/
+- [ ] templating/
+- [ ] users/
+- [ ] partials/
+- [ ] plugins/
+- [ ] datasource/
+- [ ] cloudwatch/
+- [ ] dashboard/
+- [ ] elasticsearch/
+- [ ] grafana/
+- [ ] grafana-azure-monitor-datasource/
+- [ ] graphite/
+- [ ] influxdb/
+- [ ] input/
+- [ ] loki/
+- [ ] mixed/
+- [ ] mssql/
+- [ ] mysql/
+- [ ] opentsdb/
+- [ ] postgres/
+- [ ] prometheus/
+- [ ] stackdriver/
+- [ ] testdata/
+- [ ] panel/
+- [ ] alertlist/
+- [ ] annolist/
+- [ ] bargauge/
+- [ ] dashlist/
+- [ ] gauge/
+- [ ] gettingstarted/
+- [ ] graph/
+- [ ] graph2/
+- [ ] heatmap/
+- [ ] logs/
+- [ ] piechart/
+- [ ] pluginlist/
+- [ ] singlestat/
+- [ ] singlestat2/
+- [ ] table/
+- [ ] table2/
+- [ ] text/
+- [ ] text2/
+- [ ] types/
+- [ ] emails/
+
+</details>
 
 <a name="GgDhn"></a>
 ## 构建方式
