@@ -4,7 +4,7 @@
 ## 前言
 本文主要记录Grafana汉化思路及实施过程。<br />若发现文章中描述错误，欢迎在Github中指正。<br />Grafana中文版本，基于官方源码进行汉化。汉化内容主要为前端UI界面文本，不涉及后端内容。
 
-相关建议欢迎留言：<br />Github: [https://github.com/pi2star/grafana-chinese.git](https://github.com/pi2star/grafana-chinese.git)<br />Email: w958660278@163.com<br />QQ群: 921235002
+相关建议欢迎留言：<br />Github: [https://github.com/WangHL0927/grafana-chinese](https://github.com/WangHL0927/grafana-chinese)<br />Email: w958660278@163.com<br />QQ群: 921235002
 
 
 ![image.png](https://cdn.nlark.com/yuque/0/2019/png/225645/1571330206534-f573da7d-f716-4f13-a500-24bb34522801.png#align=left&display=inline&height=411&name=image.png&originHeight=411&originWidth=300&search=&size=110904&status=done&width=300)
@@ -24,7 +24,7 @@
 
 拉取仓库
 ```bash
-git clone https://github.com/pi2star/grafana-chinese.git
+git clone https://github.com/WangHL0927/grafana-chinese
 cd grafana-chinese
 ```
 
