@@ -27,8 +27,8 @@
 # 输入 6 回车进行初始化
 # 初始化完成后继续。。。
 
-cd grafana
-yran run build
+cd ./grafana
+yarn build
 ```
 
 
