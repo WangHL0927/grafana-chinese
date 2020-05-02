@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-grafana_version='6.4.3'
+grafana_version='6.7.3'
 console() {
   content=$2
   case $1 in
