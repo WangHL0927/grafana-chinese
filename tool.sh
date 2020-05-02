@@ -34,13 +34,13 @@ releaseDockerDev() {
   console danger "Input build version and press ENTER:[eg. 0002]"
   read version
   tag="$docker_user/grafana-cn:$grafana_version.$version-dev"
+  tag2="$docker_user/grafana-cn:latest-dev"
   console action "Build and push $grafana_version.$version-dev..."
   rm -rf ./grafana/public/build/*.js.map
   docker build -t $tag .
   docker push $tag
-  tag2="$docker_user/grafana-cn:latest-dev"
-  console action "Build and push latest-dev..."
-  docker build -t $tag2 .
+  console action "Push latest-dev..."
+  docker tag $tag $tag2
   docker push $tag2
   console success 'Release success!'
 }
@@ -57,8 +57,8 @@ releaseDocker() {
   rm -rf ./grafana/public/build/*.js.map
   docker build -t $tag .
   docker push $tag
-  console action "Build and push latest..."
-  docker build -t $tag2 .
+  console action "Push latest..."
+  docker tag $tag $tag2
   docker push $tag2
   console success 'Release success!'
 }
