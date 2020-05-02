@@ -15,15 +15,9 @@ console() {
 
 main() {
   console br
-  console action 'Remove grafana-dev-server...'
-  console action 'Stop dev-server...'
-  docker stop grafana-dev-server
-
-  console action 'Remove dev-server...'
-  docker rm grafana-dev-server
-  console action 'Remove dev-server data...'
-  rm -rf `pwd`/tmp/grafana-dev-server
-  console success 'Remove complete!'
+  console action 'Restart grafana-dev-server...'
+  docker restart grafana-dev-server
+  console success 'Restart complete!'
 }
 
 main

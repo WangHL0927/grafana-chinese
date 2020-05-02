@@ -69,9 +69,10 @@ printMenu() {
   console br
   console info "1. Start dev-server."
   console info "2. Stop/Remove dev-server."
-  console info "3. Release to DockerHub with dev tag."
-  console info "4. Release to DockerHub with latest tag."
-  console info "5. Init dev project."
+  console info "3. Restart dev-server."
+  console info "4. Release to DockerHub with dev tag."
+  console info "5. Release to DockerHub with latest tag."
+  console info "6. Init dev project."
   console br
   console danger "Input number and press ENTER:"
 }
@@ -83,9 +84,10 @@ main() {
   case $num in
   "1") ./dev-server/dev-server.sh ;;
   "2") ./dev-server/remove-dev-server.sh ;;
-  "3") releaseDockerDev ;;
-  "4") releaseDocker ;;
-  "5") initDevProject ;;
+  "3") ./dev-server/restart-dev-server.sh ;;
+  "4") releaseDockerDev ;;
+  "5") releaseDocker ;;
+  "6") initDevProject ;;
   *)
     console error "ERROR: undefined function!"
     exit;;
