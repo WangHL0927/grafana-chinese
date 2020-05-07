@@ -13,6 +13,17 @@
 ## 参与汉化
 请移步至源码项目提交PR。<br />传送门：[https://github.com/WangHL0927/grafana](https://github.com/WangHL0927/grafana)<br />
 
+```bash
+#使用tool.sh 获取源码、一键发行
+
+./tool.sh
+# 输入 6 回车拉区源码项目并初始化环境 
+# 需node.js(>12.0.0) yarn (npm i -g yarn)
+# ./grafana 即为中文版本目录
+# 查看汉化教程获取详细信息 https://wanghualong.cn/archives/44/
+```
+
+
 <a name="kZYxw"></a>
 ## 版本进度
 
@@ -24,11 +35,6 @@
 ## 构建方式
 ```bash
 ./tool.sh
-# 输入 6 回车进行初始化
-# 初始化完成后继续。。。
-
-cd ./grafana
-yarn build
 ```
 
 
