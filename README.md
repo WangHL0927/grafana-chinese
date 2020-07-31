@@ -2,9 +2,7 @@
 
 <a name="NPS5Q"></a>
 ## 简介
-自己做的中文版，粗糙且枯燥。<br />邮箱：w958660278@163.com<br />网站：[https://wanghualong.cn](https://wanghualong.cn/)<br />Github：[https://github.com/WangHL0927/grafana-chinese](https://github.com/WangHL0927/grafana-chinese)<br />Q群：921235002<br />
-<br />![image.png](https://cdn.nlark.com/yuque/0/2019/png/225645/1571331709247-18e8dfac-6398-4ede-a220-c7db9392638e.png#align=left&display=inline&height=411&margin=%5Bobject%20Object%5D&name=image.png&originHeight=411&originWidth=300&size=110904&status=done&style=none&width=300)<br />
-
+自己做的中文版，粗糙且枯燥。<br />邮箱：w958660278@163.com<br />网站：[https://wanghualong.cn](https://wanghualong.cn/)<br />Github：[https://github.com/WangHL0927/grafana-chinese](https://github.com/WangHL0927/grafana-chinese)<br />钉钉群: 32637212<br />网站：[https://wanghualong.cn](https://wanghualong.cn)<br />![IMG_0675.jpeg](https://cdn.nlark.com/yuque/0/2020/jpeg/225645/1596177489771-c9bc1635-3cf3-487b-84c3-9f272a4ef4c9.jpeg#align=left&display=inline&height=387&margin=%5Bobject%20Object%5D&name=IMG_0675.jpeg&originHeight=387&originWidth=300&size=44417&status=done&style=none&width=300)
 <a name="wcU8O"></a>
 ## 汉化教程
 传送门：[https://wanghualong.cn/archives/44/](https://wanghualong.cn/archives/44/)<br />
